@@ -18,13 +18,13 @@ path_group = path_file.parent
 path = Path(os.path.abspath(__file__)).parent.parent.parent
 sys.path.append(str(path))
 
-path = Path(os.path.abspath('fusap_rpa_test_fwk')).parent.parent
+path = Path(os.path.abspath('rpa_robot')).parent.parent
 sys.path.append(str(path))
 
 
 
-from fusap_rpa_test_fwk.fusap_tools import *
-from fusap_rpa_test_fwk.fusap_db import *
+from rpa_robot.rpa_tools import *
+from rpa_robot.rpa_db import *
 
 
 from flask import Flask, json, request

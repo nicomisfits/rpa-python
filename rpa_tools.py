@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-# © FUSAP SRL
-# $Autor: Nicolás Lista / Jose Tabuyo $
+# $Autor: Nicolás Lista $
 # $Revision: 1 $
 # $Fecha de Creación: 27/05/2020 $
-# Fecha de Modificación: 1/08/2020 $
+# Fecha de Modificación: 19/05/2021 $
 import sys
 import os
 from sys import argv
@@ -23,7 +22,7 @@ import platform
 from typing import List
 
 from selenium.webdriver.remote.webelement import WebElement
-from fusap_rpa_test_fwk.fusap_email import *
+from rpa_robot.rpa_email import *
 
 sistema = platform.system().lower()
 config = configparser.ConfigParser()
@@ -95,13 +94,13 @@ def print_stack_error(email=True, log_text = ""):
     if email:
 
 
-        files_path = os.path.dirname(os.path.abspath(__file__))+"/../fusap_rpa_test_fwk/general_output/"
+        files_path = os.path.dirname(os.path.abspath(__file__))+"/../rpa_robot/general_output/"
 
         Email(
             sender=config["EMAIL"]["SENDER"],
             password=config["EMAIL"]["PASSWORD"],
             to=config["EMAIL"]["RECEIVER"],
-            subject="Fusap RPA: OGS - Error Hospital",
+            subject="ROBOT RPA: OGS - Error Hospital",
             message=msg,
             files_path=files_path
         )

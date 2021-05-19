@@ -1,3 +1,3 @@
 #!/bin/bash
-docker stop fusap_rpa_test_fwk_api
-docker start fusap_rpa_test_fwk_api
+docker stop rpa_robot_api
+docker start rpa_robot_api

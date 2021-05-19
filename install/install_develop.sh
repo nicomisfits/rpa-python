@@ -25,7 +25,7 @@ fi
 
 git clone --recurse-submodules git@bitbucket.org:consultatio/rpa.git
 cd rpa
-git submodule update --remote fusap_rpa_test_fwk
+git submodule update --remote rpa_robot
 
 
 pip3 --version 2>/dev/null
@@ -67,7 +67,7 @@ sudo apt-get install unixodbc-dev
 
 
 echo "Instalando dependencias"
-pip3 install -r fusap_rpa_test_fwk/install/requirements.txt #2>/dev/null
+pip3 install -r rpa_robot/install/requirements.txt #2>/dev/null
 
 
 exit 0

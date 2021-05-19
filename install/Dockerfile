@@ -17,7 +17,7 @@ RUN apt-get install -y google-chrome-stable
 
 
 ########################################
-#### instalo cosas particulares de Fusap
+#### instalo cosas particulares
 ########################################
 RUN apt-get install libmariadb-dev -y
 
@@ -76,4 +76,4 @@ ENV DISPLAY=:99
 EXPOSE  8090
 
 ENTRYPOINT ["python"]
-CMD ["fusap_rpa_test_fwk/fusap_ws_runner/run.py"]
+CMD ["rpa_robot/rpa_ws_runner/run.py"]

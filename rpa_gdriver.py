@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# © FUSAP SRL
-# $Autor: Nicolás Lista / Jose Tabuyo $
+# $Autor: Nicolás Lista $
 # $Revision: 1 $
 # $Fecha de Creación: 27/05/2020 $
+# Fecha de Modificación: 19/05/2021 $
 
 import sys
 import os
@@ -14,7 +14,7 @@ import os.path as path
 
 
 
-from fusap_rpa_test_fwk.fusap_tools import *
+from rpa_robot.rpa_tools import *
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -40,8 +40,8 @@ def next_available_row(ws):
 class Gsheet:
     def __init__(self, url, sheetName=""):
 
-        path_fusap_rpa_test_fwk = Path(os.path.abspath(__file__)).parent
-        path_rpa = path_fusap_rpa_test_fwk.parent
+        path_rpa_robot = Path(os.path.abspath(__file__)).parent
+        path_rpa = path_rpa_robot.parent
         sys.path.append(str(path_rpa))
 
 

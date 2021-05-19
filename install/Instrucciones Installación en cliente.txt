@@ -30,7 +30,7 @@ cat /c/Users/dtisher/.ssh/id_rsa.pub
 
 4-
 git clone --recurse-submodules git@bitbucket.org:consultatio/rpa.git
-git submodule update --remote fusap_rpa_test_fwk
+git submodule update --remote rpa_robot
 
 
 
@@ -63,7 +63,7 @@ en el instalador elegir la opcion de abajo(odbc sql driver 17) (SQL SERVER)
 
 
 6-
-pip install -r fusap_rpa_test_fwk/install/requirements.txt
+pip install -r rpa_robot/install/requirements.txt
 
 Si sale error
 building 'pyodbc' extension

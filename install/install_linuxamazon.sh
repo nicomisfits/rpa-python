@@ -4,8 +4,8 @@ cd ..
 yum install git
 
 cd
-mkdir Fusap
-cd Fusap
+mkdir rpa-robot
+cd rpa-robot
 git clone
 
 
@@ -52,10 +52,10 @@ docker run --name rpa_python -dit --network host -w /usr/workspace -v $(pwd):/us
 
 
 #Creamos el alias (para correrlos más cómodo)
-alias fusap.rpa='docker exec -it rpa_python'
+alias robot.rpa='docker exec -it rpa_python'
 
 #Corremos el automatismo
-fusap.rpa backoffice/cotizacion_dolar_db/run.py
+robot.rpa backoffice/cotizacion_dolar_db/run.py
 
 
 

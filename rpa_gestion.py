@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
-# © FUSAP SRL
 # $Autor: Nicolás Lista $
-# $Revision: 1 $
 # $Fecha de Creación: 20/08/2020 $
-# Fecha de Modificación: 24/09/2020 $
+# Fecha de Modificación: 19/05/2021 $
 import sys
 import os
 from os import listdir
 from os.path import isfile, isdir
-from fusap_rpa_test_fwk.fusap_tools import *
+from rpa_robot.rpa_tools import *
 
 
 

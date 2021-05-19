@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
-# © FUSAP SRL
-# $Autor: Nicolás Lista / Jose Tabuyo $
-# $Revision: 1 $
+# $Autor: Nicolás Lista $
 # $Fecha de Creación: 27/05/2020 $
-# Fecha de Modificación: 1/08/2020 $
-from fusap_rpa_test_fwk.fusap_tools import *
+# Fecha de Modificación: 19/05/2021 $
+from rpa_robot.rpa_tools import *
 
 from os import listdir
 from selenium import webdriver

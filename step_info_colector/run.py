@@ -9,14 +9,14 @@ path_group = path_file.parent
 path_root = path_group.parent
 sys.path.append(str(path_root))
 
-from fusap_rpa_test_fwk.fusap_web import *
+from rpa_robot.rpa_web import *
 
 try:
     for file in listdir(str(path_group)+"/general_output/"):
         if "keep" not in file:
             os.remove(str(path_group)+"/general_output/"+str(file))
 
-    print("Fusap RPA")
+    print("ROBOT RPA")
     print("Ejecución:", datetime.datetime.now())
     print("")
     print("Ingresar la URL de la web a capturar:")

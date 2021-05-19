@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
-# © FUSAP SRL
-# $Autor: Jose Tabuyo $
-# $Revision: 1 $
+# $Autor: Nicolas Lista $
 # $Fecha de Creación: 27/05/2020 $
-# Fecha de Modificación: 26/08/2020 $
+# Fecha de Modificación: 19/05/2021 $
 
-from fusap_rpa_test_fwk.fusap_tools import *
+from rpa_robot.rpa_tools import *
 import MySQLdb
 import pyodbc
 
