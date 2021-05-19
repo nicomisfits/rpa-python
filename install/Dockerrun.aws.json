@@ -1,0 +1,13 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+        "Name": "253518134787.dkr.ecr.sa-east-1.amazonaws.com/fusap-rpa:devel",
+        "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "5000"
+    }
+  ]
+}
+

@@ -1,0 +1,393 @@
+<head>
+<link href="app_themes/infragistics/default/ig_shared.css" type="text/css" rel="stylesheet">
+<link href="app_themes/infragistics/default/ig_menu.css" type="text/css" rel="stylesheet">
+<link href="app_themes/infragistics/default/ig_panel.css" type="text/css" rel="stylesheet">
+<link href="app_themes/infragistics/default/ig_tree.css" type="text/css" rel="stylesheet"><title>
+	EscoTradeSolution
+</title><link rel="shortcut icon" href="App_themes/ETSNew/favicon.ico"><link href="Styles/Pages/et_Main.css" rel="stylesheet" type="text/css"><link href="Styles/Pages/et_Autocomplete.css" rel="stylesheet" type="text/css"><link href="App_Themes/ETSNew/Controls/Accordion/ec_Accordion.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/ComboEditor/ec_ComboEditor.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/DateEditor/ec_DateEditor.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/HoraEditor/ec_SpinHoraEditor.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/LayoutController/ec_Columna.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/LayoutController/ec_Controls.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/LayoutController/ec_LayoutController.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/LayoutController/et_BlockUI.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/NumericEditor/ec_NumericEditor.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/NumericEditor/ec_SpinNumericEditor.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/UltraWebMenu/et_UltraWebMenu.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/UltraWebTab/ig_tab.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/WebImageButton/ig_webimagebutton.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/WebUserControls/ec_WebUserControls.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/et_Common.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Pages/et_DataFMT.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Pages/et_GridRow.css" type="text/css" rel="stylesheet"><link href="Styles/Pages/et_wucHeader.css" rel="stylesheet" type="text/css"><link href="Styles/Pages/et_wucFooter.css" rel="stylesheet" type="text/css"><style type="text/css">
+	.txtBuscar0{}</style><style type="text/css">
+<!--
+.igt_align {vertical-align:middle;}
+-->
+</style><script type="text/javascript">var webPanelUltOp_props=["webPanelUltOp","webPanelUltOp",true,true,0,[["",false],["",false] ],"webPanelUltOppnl et_PanelDerecho_Panel",["webPanelUltOphdrxpnd et_PanelDerecho_Header_Expanded","webPanelUltOphdrxpnd et_PanelDerecho_Header_Expanded","webPanelUltOphdrhovr et_PanelDerecho_Header_Hover" ],'','' ];
+var webPanelUltOp=ig_CreateWebPanel("webPanelUltOp",webPanelUltOp_props);</script></head>
+<body id="bodyMain">
+    
+    <form name="frmMain" method="post" action="frwMain.aspx" id="frmMain">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTExODcxMDE5MTYPZBYCAgMPZBYOAgEPZBYEAgEPZBYCZg8WBB4JaW5uZXJodG1sBSdtaSYjMjMzO3Jjb2xlcywgMTEgZGUgbm92aWVtYnJlIGRlIDIwMjAeB29uY2xpY2sFywFqYXZhc2NyaXB0OkV4ZWNFbnRUcEFjY2lvbignRDRDN0QyRjc3OUVCMzcxOCcsJzcxNjZGMkM3MEMzQkNFOTknLCczN0NFOUI2QUM1MDY3MzBFMUE2OTI4MUY5RUY5MzJCMkY5QkUyNTNEMTQzMEI3ODUyOTc3MjdBM0Y2MUIyMDYyOTZFOUQ0Q0M4MDM4N0MyMicsNDIwLDIyNSwwLG51bGwsbnVsbCxudWxsLCczMTI1M0FFQUUxNEU0NEFDJyxudWxsLG51bGwpO2QCAw8WAh4HVmlzaWJsZWgWAmYPFgQfAAUQTGljZW5jaWFkbyBwYXJhIB8CaGQCAw8PFgIeBFRleHQFDE1hdGlhcyAgTHVuYWRkAgcPDxYCHgFFBQZCdXNjYXI8KwAGAQUWBB4Hb25mb2N1cwUXV2F0ZXJNYXJrKHRoaXMsIGV2ZW50KTseBm9uYmx1cgUXV2F0ZXJNYXJrKHRoaXMsIGV2ZW50KTtkAgkPZBYEAgEPFgIfAWVkAgMPDxYCHwNlFgIfAWVkAgsPDxYCHgtOYXZpZ2F0ZVVybAUrZnJ3TGlua1JlZGlyZWN0b3IuYXNweD9NQUM9RTM2NzdFMjVDQ0VCNjMxN2QWAgIBDw8WAh8DBQVTYWxpcmRkAg0PZBYKAgIPD2Q8KwAFAQAPZBQrAAQPZGQPZGRkZBYEAgEPDxYEHg1BbHRlcm5hdGVUZXh0BRtBYnJpciBwYW5lbCBkZSBoZXJyYW1pZW50YXMfAmhkZAIDDxQrAAMPFgIeDFNlbGVjdGVkTm9kZWRkPCsAEwQAFgYeD0NvbXBvbmVudFRhcmdldAspqgFJbmZyYWdpc3RpY3MuV2ViVUkuVWx0cmFXZWJOYXZpZ2F0b3IuQ29tcG9uZW50VGFyZ2V0LCBJbmZyYWdpc3RpY3MyLldlYlVJLlVsdHJhV2ViTmF2aWdhdG9yLnY4LjMsIFZlcnNpb249OC4zLjIwMDgzLjIxMzgsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49N2RkNWMzMTYzZjJjZDBjYgAeFERlZmF1bHRTZWxlY3RlZEltYWdlZR4KSlNGaWxlTmFtZWUFFg8UKwAGFgYeBHRleHQFBlRhYmxhcx4HZGF0YUtleQUDVEJMHgN0YWcFA1RCTBYHPCsABgEAFgYfDQUURXN0cnVjdHVyYSBDb21lcmNpYWwfDgUNRVNUUkNPTUVSQ0lBTB8PBQ1FU1RSQ09NRVJDSUFMFCsABhYGHw0FCUVudGlkYWRlcx8OBQlFTlRJREFERVMfDwUJRU5USURBREVTFgE8KwAGAQAWBh8NBRJEYXRvcyBSZWxhY2lvbmFkb3MfDgULREFUT1NSRUxFTlQfDwULREFUT1NSRUxFTlRkZGRkPCsABgEAFgYfDQUWVWJpY2FjacOzbiBHZW9ncsOhZmljYR8OBRNVQklDQUNJT05HRU9HUkFGSUNBHw8FE1VCSUNBQ0lPTkdFT0dSQUZJQ0E8KwAGAQAWBh8NBRBSZWdpb25hbGl6YWNpw7NuHw4FD1JFR0lPTkFMSVpBQ0lPTh8PBQ9SRUdJT05BTElaQUNJT048KwAGAQAWBh8NBQlHZW5lcmFsZXMfDgUJR0VORVJBTEVTHw8FCUdFTkVSQUxFUzwrAAYBABYGHw0FCUltcHVlc3Rvcx8OBQlJTVBVRVNUT1MfDwUJSU1QVUVTVE9TPCsABgEAFgYfDQUVQ29lZmljaWVudGUgZGUgQWp1c3RlHw4FCkNPRUZBSlVTVEUfDwUKQ09FRkFKVVNURWRkZGQUKwAGFgYfDQUaQWRtaW5pc3RyYWNpw7NuIGRlIEN1ZW50YXMfDgUHQ1VFTlRBUx8PBQdDVUVOVEFTFgI8KwAGAQAWBh8NBRJEYXRvcyBSZWxhY2lvbmFkb3MfDgULREFUT1NSRUxDTVQfDwULREFUT1NSRUxDTVQ8KwAGAQAWBh8NBRVNYW5lam8gZGUgQXV0b3JpemFkb3MfDgULQVVUT1JJWkFET1MfDwULQVVUT1JJWkFET1NkZGRkFCsABhYGHw0FH0FkbWluaXN0cmFjacOzbiBkZSBJbnN0cnVtZW50b3MfDgUFSU5TVFIfDwUFSU5TVFIWATwrAAYBABYGHw0FEkRhdG9zIFJlbGFjaW9uYWRvcx8OBQ1EQVRPU1JFTElOU1RSHw8FDURBVE9TUkVMSU5TVFJkZGRkFCsABhYGHw0FJUFkbWluaXN0cmFjacOzbiBkZSBBcmFuY2VsZXMgLyBHYXN0b3MfDgUNQVJBTkNFTEVTR1RPUx8PBQ1BUkFOQ0VMRVNHVE9TFgM8KwAGAQAWBh8NBQhEZXJlY2hvcx8OBQ9ERUZERVJFQ0hPU0dUT1MfDwUPREVGREVSRUNIT1NHVE9TPCsABgEAFgYfDQUHQXJhbmNlbB8OBRBERUZBUkFOQ0VMRVNHVE9THw8FEERFRkFSQU5DRUxFU0dUT1M8KwAGAQAWBh8NBQxPdHJvcyBHYXN0b3MfDgUJT1RST1NHVE9THw8FCU9UUk9TR1RPU2RkZGQUKwAGFgYfDQUXR2VzdGnDs24gZGUgT3BlcmFjaW9uZXMfDgULT1BFUkFDSU9ORVMfDwULT1BFUkFDSU9ORVMWBzwrAAYBABYGHw0FA01BRR8OBQ5PUEVSQUNJT05FU01BRR8PBQ5PUEVSQUNJT05FU01BRRQrAAYWBh8NBQRCWU1BHw4FD09QRVJBQ0lPTkVTTUVSVh8PBQ9PUEVSQUNJT05FU01FUlYWAzwrAAYBABYGHw0FI05lZ29jaWFjacOzbiBkZSBDUEQsIEZDRSB5IFBhZ2Fyw6lzHw4FDk5FR0NQRFlQQUdBUkVTHw8FDk5FR0NQRFlQQUdBUkVTPCsABgEAFgYfDQUKUG9zaWNpb25lcx8OBQpQT1NJQ0lPTkVTHw8FClBPU0lDSU9ORVM8KwAGAQAWBh8NBQdUcmFkaW5nHw4FB1RSQURJTkcfDwUHVFJBRElOR2RkZGQ8KwAGAQAWBh8NBQVST0ZFWB8OBRBPUEVSQUNJT05FU1JPRkVYHw8FEE9QRVJBQ0lPTkVTUk9GRVg8KwAGAQAWBh8NBRxGb25kb3MgQ29tdW5lcyBkZSBJbnZlcnNpw7NuHw4FA0ZDSR8PBQNGQ0k8KwAGAQAWBh8NBRVNZXJjYWRvcyBkZWwgRXh0ZXJpb3IfDgUOT1BFUkFDSU9ORVNNRVgfDwUOT1BFUkFDSU9ORVNNRVg8KwAGAQAWBh8NBQxDb3RpemFjaW9uZXMfDgUMQ09USVpBQ0lPTkVTHw8FDENPVElaQUNJT05FUzwrAAYBABYGHw0FEkRhdG9zIFJlbGFjaW9uYWRvcx8OBQxEQVRPU1JFTE9QRVIfDwUMREFUT1NSRUxPUEVSZGRkZBQrAAYWBh8NBQxMaXF1aWRhY2nDs24fDgUDTElRHw8FA0xJURYBPCsABgEAFgYfDQUOVHJhbnNmZXJlbmNpYXMfDgUNVFJBTlNGRVJFTkNJQR8PBQ1UUkFOU0ZFUkVOQ0lBZGRkZDwrAAYBABYGHw0FC01vdmltaWVudG9zHw4FA01PVh8PBQNNT1Y8KwAGAQAWBh8NBQxDb21wcm9iYW50ZXMfDgUMQ09NUFJPQkFOVEVTHw8FDENPTVBST0JBTlRFUxQrAAYWBh8NBRZHZXN0acOzbiBkZSBHYXJhbnTDrWFzHw4FCUdBUkFOVElBUx8PBQlHQVJBTlRJQVMWAjwrAAYBABYGHw0FCEluZm9ybWVzHw4FEUlORk9STUVTR0FSQU5USUFTHw8FEUlORk9STUVTR0FSQU5USUFTPCsABgEAFgYfDQUSRGF0b3MgUmVsYWNpb25hZG9zHw4FEURBVE9TUkVMR0FSQU5USUFTHw8FEURBVE9TUkVMR0FSQU5USUFTZGRkZBQrAAYWBh8NBQxDb250YWJpbGlkYWQfDgUDQ1RCHw8FA0NUQhYEPCsABgEAFgYfDQUMRGVmaW5pY2lvbmVzHw4FBkRFRkNUQh8PBQZERUZDVEI8KwAGAQAWBh8NBRJJbmZvcm1lcyBDb250YWJsZXMfDgURSU5GT1JNRVNDT05UQUJMRVMfDwURSU5GT1JNRVNDT05UQUJMRVM8KwAGAQAWBh8NBQhQcm9jZXNvcx8OBQdQUk9DQ1RCHw8FB1BST0NDVEI8KwAGAQAWBh8NBRJEYXRvcyBSZWxhY2lvbmFkb3MfDgULREFUT1NSRUxDVEIfDwULREFUT1NSRUxDVEJkZGRkFCsABhYGHw0FF0dlc3Rpw7NuIGRlIFByb3ZlZWRvcmVzHw4FD0dFU1RQUk9WRUVET1JFUx8PBQ9HRVNUUFJPVkVFRE9SRVMWARQrAAYWBh8NBQtQcm92ZWVkb3Jlcx8OBQtQUk9WRUVET1JFUx8PBQtQUk9WRUVET1JFUxYBPCsABgEAFgYfDQUSRGF0b3MgUmVsYWNpb25hZG9zHw4FCERBVE9TUkVMHw8FCERBVE9TUkVMZGRkZGRkZGQUKwAGFgYfDQUISW5mb3JtZXMfDgUISU5GT1JNRVMfDwUISU5GT1JNRVMWBDwrAAYBABYGHw0FG1JlcG9ydGUgZGUgQ3VlbnRhIENvcnJpZW50ZR8OBQhDVEFTQ1RFUx8PBQhDVEFTQ1RFUzwrAAYBABYGHw0FCkNvcGlhZG9yZXMfDgUDQ09QHw8FA0NPUBQrAAYWBh8NBQNVSUYfDgUDVUlGHw8FA1VJRhYCPCsABgEAFgYfDQUgUGFyw6FtZXRyb3MgZGUgTGF2YWRvIGRlIERpbmVybyAfDgUWUEFSQU1FVFJPU0xBVkFET0RJTkVSTx8PBRZQQVJBTUVUUk9TTEFWQURPRElORVJPPCsABgEAFgYfDQUKTW9uaXRvcmVvIB8OBQlNT05JVE9SRU8fDwUJTU9OSVRPUkVPZGRkZDwrAAYBABYGHw0FCENpcmN1bGFyHw4FCENJUkNVTEFSHw8FCENJUkNVTEFSZGRkZBQrAAYWBh8NBQpJbnRlcmZhY2VzHw4FC19JTlRFUkZBQ0VTHw8FC19JTlRFUkZBQ0VTFgQ8KwAGAQAWBh8NBQdFbnRyYWRhHw4FE19JTlRFUkZBQ0VTX0VOVFJBREEfDwUTX0lOVEVSRkFDRVNfRU5UUkFEQTwrAAYBABYGHw0FBlNhbGlkYR8OBRJfSU5URVJGQUNFU19TQUxJREEfDwUSX0lOVEVSRkFDRVNfU0FMSURBPCsABgEAFgYfDQUNQ29tcGFyYWNpb25lcx8OBRlfSU5URVJGQUNFU19DT01QQVJBQ0lPTkVTHw8FGV9JTlRFUkZBQ0VTX0NPTVBBUkFDSU9ORVM8KwAGAQAWBh8NBQlTZXJ2aWNpb3MfDgUVX0lOVEVSRkFDRVNfU0VSVklDSU9THw8FFV9JTlRFUkZBQ0VTX1NFUlZJQ0lPU2RkZGQUKwAGFgYfDQUcQWRtaW5pc3RyYWNpw7NuIGRlIFNlZ3VyaWRhZB8OBQNTRUcfDwUDU0VHFgE8KwAGAQAWBh8NBQhSZXBvcnRlcx8OBQZTRUdSRVAfDwUGU0VHUkVQZGRkZBQrAAYWBh8NBQxQcmVmZXJlbmNpYXMfDgUEUFJFRh8PBQRQUkVGFgM8KwAGAQAWBh8NBRNDb3JyZW8gRWxlY3Ryw7NuaWNvHw4FClNFR1NSVk1BSUwfDwUKU0VHU1JWTUFJTDwrAAYBABYGHw0FC051bWVyYWNpw7NuHw4FCk5VTUVSQUNJT04fDwUKTlVNRVJBQ0lPThQrAAYWBh8NBSpDb25maWd1cmFjacOzbiBDb25leGnDs24gU2lzdGVtYXMgRXh0ZXJub3MfDgUTQ09ORkNPTkVYSU9OU0lTVEVYVB8PBRNDT05GQ09ORVhJT05TSVNURVhUFgI8KwAGAQAWBh8NBRhQYXJhbWV0cm8gSW50ZXJmYXogUk9GRVgfDgUWX1BBUkFNRVRST1NUUE9QRVJBQ0lPTh8PBRZfUEFSQU1FVFJPU1RQT1BFUkFDSU9OPCsABgEAFgYfDQUbUGFyw6FtZXRyb3MgSW50ZXJmYXogU0lPUEVMHw4FGFBBUkFNRVRST1NJTlRFUkZBWlNJT1BFTB8PBRhQQVJBTUVUUk9TSU5URVJGQVpTSU9QRUxkZGRkZGRkZAYWABI8KwAJAQUWAh4Dc3JjZWRkAgwPPCsACQBkAg4PZBYCAgEPD2Q8KwAFAQAPFgIfAwUQQWNjZXNvcyBEaXJlY3RvcxQrAAQPZGQPZGRkZBYCZg88KwAJAQAPFgQeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50ZmRkAhAPDxYCHgRJR184ZmQWAgIBDw9kPCsABQEADxYCHwMFG8OabHRpbWFzIG9wY2lvbmVzIGRlbCBNZW7DuhQrAAQPZGQPZGRkZBYCZg88KwAJAQAPFgQfERYAHxICBWQWCmYPZBYEAgEPDxYCHwgFG0FicmlyIHBhbmVsIGRlIGhlcnJhbWllbnRhcxYGHwEFM1Nob3dNZW51QWNjKHRoaXMsLTEsLTEsJzU1QzIzNDA5MTY3RDgzRDgnLDUwMCwzMzUpOx4Fc3R5bGUFCWRpc3BsYXk6Ox4FdGl0bGUFG0FicmlyIHBhbmVsIGRlIGhlcnJhbWllbnRhc2QCAw8WBh8BBTJMaXN0SXRlbV9PbkNsaWNrKCc1NUMyMzQwOTE2N0Q4M0Q4JywwLC0xLDUwMCwzMzUpOx8ABRdDb3RpemFjaW9uZXMgZGUgTW9uZWRhcx8VBR1BYnJpciBDb3RpemFjaW9uZXMgZGUgTW9uZWRhc2QCAQ9kFgQCAQ8PFgIfCAUbQWJyaXIgcGFuZWwgZGUgaGVycmFtaWVudGFzFgYfAQUzU2hvd01lbnVBY2ModGhpcywtMSwtMSwnRjZDMUU5M0UxMTkyQUNGMCcsNzkwLDQ3MCk7HxQFCWRpc3BsYXk6Ox8VBRtBYnJpciBwYW5lbCBkZSBoZXJyYW1pZW50YXNkAgMPFgYfAQUyTGlzdEl0ZW1fT25DbGljaygnRjZDMUU5M0UxMTkyQUNGMCcsMCwtMSw3OTAsNDcwKTsfAAUHQ3VlbnRhcx8VBQ1BYnJpciBDdWVudGFzZAICD2QWBAIBDw8WAh8IBRtBYnJpciBwYW5lbCBkZSBoZXJyYW1pZW50YXMWBh8BBTNTaG93TWVudUFjYyh0aGlzLC0xLC0xLCc0MEE3NDA5MTNCODAzNUJDJyw4MTAsNTYwKTsfFAUJZGlzcGxheTo7HxUFG0FicmlyIHBhbmVsIGRlIGhlcnJhbWllbnRhc2QCAw8WBh8BBTJMaXN0SXRlbV9PbkNsaWNrKCc0MEE3NDA5MTNCODAzNUJDJywwLC0xLDgxMCw1NjApOx8ABRhPcGVyYWNpb25lcyBkZWwgZXh0ZXJpb3IfFQUeQWJyaXIgT3BlcmFjaW9uZXMgZGVsIGV4dGVyaW9yZAIDD2QWBAIBDw8WAh8IBRtBYnJpciBwYW5lbCBkZSBoZXJyYW1pZW50YXMWBh8BBTNTaG93TWVudUFjYyh0aGlzLC0xLC0xLCc3MEVFOTI5ODQwN0RDNjYwJyw3NjUsMzkwKTsfFAUJZGlzcGxheTo7HxUFG0FicmlyIHBhbmVsIGRlIGhlcnJhbWllbnRhc2QCAw8WBh8BBTJMaXN0SXRlbV9PbkNsaWNrKCc3MEVFOTI5ODQwN0RDNjYwJywwLC0xLDc2NSwzOTApOx8ABR5SZWNpYm9zIHkgQ29tcHJvYmFudGVzIGRlIFBhZ28fFQUkQWJyaXIgUmVjaWJvcyB5IENvbXByb2JhbnRlcyBkZSBQYWdvZAIED2QWBAIBDw8WAh8IBRtBYnJpciBwYW5lbCBkZSBoZXJyYW1pZW50YXMWBh8BBTJTaG93TWVudUFjYyh0aGlzLDAsLTEsJzZGNUU4REZDQkYwN0U3RTYnLDgxMCw3OTUpOx8UBQlkaXNwbGF5OjsfFQUbQWJyaXIgcGFuZWwgZGUgaGVycmFtaWVudGFzZAIDDxYGHwEFMkxpc3RJdGVtX09uQ2xpY2soJzZGNUU4REZDQkYwN0U3RTYnLDEsLTEsODEwLDc5NSk7HwAFGFJlcG9ydGUgQ3VlbnRhIENvcnJpZW50ZR8VBR5BYnJpciBSZXBvcnRlIEN1ZW50YSBDb3JyaWVudGVkAhIPDxYCHwJoZBYCAgEPD2Q8KwAFAQAPZBQrAAQPZGQPZGRkZGQCDw9kFgQCAQ8PFgIfAwUSQ29weXJpZ2h0IMKpIDIwMDkgZGQCAg8PFgIfAwVdU2lzdGVtYXMgRXNjbyBTLlIuTC4gRXNjb1RyYWRlU29sdXRpb24gdjIuMDEuMzMuMDYgICg2NCBiaXRzKSAgKDIwMjAwODI4LjE5MDMgdjoyMDEzMzA2IHNwOjQpZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgYFCWNtZEJ1c2NhcgUJdHh0QnVzY2FyBQdwbmxNZW51BQ9wbmxNZW51JHRydk1lbnUFC3dlYlBhbmVsRmF2BQ13ZWJQYW5lbFVsdE9w6jGcdjD77h+DCG/1cCCR7ardt/c=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmMain'];
+if (!theForm) {
+    theForm = document.frmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=LQgy2mqnQk-bCuv9Fou-sPAO4dVPQn9u3UePAB9-AV2ywLNtIZM8OnxYlRTUsNialaqe9Kjn889fJVCZTDNObq2TGHU1&amp;t=636316698606689430" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=j_9E50wKv2FC0Yw_7of6msMDk80TbWSmuUrNX2gNzIx5ccGOOa3bE9cZ9zuzUg990SeF_pVGx88pENRAQ5SZtpqwS5GE2jp2Os2u2vUP9NJQDzC8OOy76nQj3wgKM2n1157J4gCxgKI16_q60LBrsyVq_Zg1&amp;t=637335312115375268" type="text/javascript"></script>
+<script src="/WebResource.axd?d=mtvZSCF0Y4wqpSTUVN12K4MqLPdmIfaZC83JbQRiiNqgLqPsmIE-TjrA0Z-kFmn3zgqT9Dgesb-xDZlsgu5SyWcQq4u50Tz8BHOAN1yDt2USXSUUS5bT2oVHVrjX5N47OqSOMvJnItI2mOPrxz_hncets0s1&amp;t=637335312115375268" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function MenuEntidad_CallBack(Action, CodEntidad){ 
+WebForm_DoCallback('__Page',Action +'&'+ CodEntidad,MenuEntidad_CallBackReturn,null,CallBack_Error,false)
+}
+function RightInfoLookForUpdatesCallBack(){ 
+WebForm_DoCallback('__Page',"RightInfo",RightInfo_Update,null,CallBack_Error,false)}
+var _webMenuEntID='webMenuEnt';var _webMenuFavEntID='webMenuFavEnt';var _webMenuAccID='webMenuAcc';var _lstMenuID='lstMenu';var _warpAsyncFav='warpAsyncFav';var _warpAsyncUltOp='warpAsyncUltOp';var _mnuAgregar='webMenuAcc_1';var _mnuBuscar='webMenuAcc_2';var _mnuGrilla='webMenuEnt_1';var _webMenuSistemaID='webMenuSistema';var _txtBuscar='txtBuscar';var MS_STARTUP='872B3FF82A71A398';var MS_LOGOFF='E3677E25CCEB6317';var MS_CONFIGMENU='5C0B41674D5F4FDDC1B8825806218B9C';var MS_OPENGRID='581AF34ACC8705A8E1A68F1DE13C5041';var MS_EXECACT='A0F05F575CE412A2';var MS_EXECACTWIZARD='78E7CA55B697AB2081C6C5E356A140BD';var MS_DELGRIDCONFIG='9BCCFAED36D14E43140FCD6F0F1032D3';var MS_OPENFILTERWND='35D4384AE643E55DFFE9489CF426FAEA';var MS_OPENFILTERWNDFROMDSKTP='35D4384AE643E55DCB42451BF9EF5A8A36B608F5F883F898';var MS_MENUCONTEXT='153576423EA687D226E455C46AC89812';var QS_ENTIDAD='ENT';var QS_TPACCION='TPA';var QS_FORMID='FID';var QS_KEYS='KEY';var QS_MAINACTION='MAC';var QS_COMBO='CBO';var QS_MODO='MOD';var QS_ENTOP='ENTOP';var QS_CLAVES_AUXILIARES='AUX';var QSC_KEYVALUEPAIRSEP='=';var QSC_MEMBERSEP='&';var QSC_INITIATOR='?';var TPA_Agr='02BB818F45181AA5';var TPA_Mod='7166F2C70C3BCE99';var TPA_Det='FC5188740DB2A30D';var TPA_Anu='02935290E565A7DF';var TPA_Rec='1C41592E1D2E125B';var TPA_Imp='ED2212E1D3C1FABA';var TPA_Exp='754D4260E19656A3';var TPA_Frm='64DC839A26ADD6D3';var TPA_Aut='0DBF7562AF73F659';var TPA_Rch='8D12CA77CDF550AC';var MOD_Nor='02BB818F45181AA5';var MOD_Tab='7166F2C70C3BCE99';var MESS_ENT='2C39E3895491BB77';var MESS_Width='380';var MESS_Height='125';//]]>
+</script>
+
+<script src="/WebResource.axd?d=DvjbjAInxiJiR3-jrYUfNlygS0WU_Nt08_Fj32U5LWGXbMhtcIm-koGp6MZ7VeJCnqAXv9Bu6VZW-iVQLPniVAkXRspZudkMyjezw58fxZuzTHda4StlyNAcpKz-4JXqvDMw8tjM6HQy5djBF02rOfPdycI1&amp;t=637335312115375268" type="text/javascript"></script>
+<script src="/WebResource.axd?d=tKfQ_RU6iaxDkkXY9s78pfaO3Ufx6d0uFTwUbQw6u1LlCHcoDRAk0jgfRHGQM0spe9ltr69HN2nASpGX1D12nVXJVm3OHcl_rwOMD9Aozbw9iR36o-71zq5JWk4quRexSVAZCrCRKdO0581O8CwgIvf9Qt81&amp;t=637335312115375268" type="text/javascript"></script>
+<script src="/WebResource.axd?d=XbrDhzoySZhTilNiL3EHJPLS11cima1UIL6cmbRVcg9o5fV37vIVuLfJz4bFgj1qyEzN_jGC8-5erCfSQ0hUxUKPW9WIwcqU0NgKe2xQYsy0VvvxC9Y6lf2LB9eSEaOOqcVs7f8aMeNKlTEkiciSPfFbIas1&amp;t=637342382143985877" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+var ig_pi_imageUrl='/WebResource.axd?d=vQ686CSv6SUjQtXm1OlnkEFJlsSi9aqfmAsV7J3_dw4Mr74-aU9-q8T-nPxhoBasfALDZkiSgme6yiThLhS7ii3M5EEr4BTiB03fCOuxsGoQXk-wQ_TsFVtwe2oUxUSI_hd0T6H496qC6qqV45BzJWi6uwiOdWSMXzgqtEr-znghOqXN0&t=633952407660000000';try{(new Image()).src=ig_pi_imageUrl;}catch(ex){}
+//]]>
+</script>
+<script src="/WebResource.axd?d=VUthnqgE48WsqNw6iUp6cvu1AkIQhVQya8CGNt5aWrs4nW8EaWVHbCcHDu2KR4T8n4KZcY4dUqvi5RhJco0IYWZAWfquD-kY3EEL1S4vULkCE9GUYbBoA7dlHf2l8wDlr17WYyOxbDJ0Wf5KxL_jPT1Qet1xGeArMK_H_0QBN-7EW6mE0&amp;t=633952407660000000" type="text/javascript"></script>
+<script src="/WebResource.axd?d=vb_O8JjhL3pLLj-gElh8F48u6mI_n7DkxzxM7zvvzoTDvpS60hoqVB3F_9SqrFTZbRjPeGRvKlzL0n04UR6cDxHF24y3s72idp18RLKhzqLxWvF3KXDTlG5cQCED-3vXB2XAOWzBg1c-55toWfObcFWqkS2peO9riwqgpxyqHQrUhD2R0&amp;t=633952407680000000" type="text/javascript"></script>
+<script src="/WebResource.axd?d=xnKLzhBgRUuixdWSofH_SS4GhUcTISG85NQ8QXVZOB2xLJf3VzpY_wygfEZvRZf7IXIxmOwI8ZgcJKhsfgqbkvnIQdox3HEkUURL_-aCBBNrmLhwrf9skyDycX9YEtTRefidtsSYjFBSPex3FXanWrOfnRbDrHU1J43FPcNJqHMHpnEnyOPZbXpU6cRn268N-oJfsA2&amp;t=633952407680000000" type="text/javascript"></script> 
+
+<script src="/WebResource.axd?d=SV9NUzlYHf2lwYYQTX24pIP9AbwK_W3cHWoZ-qaSEl7-6IekEh_U6wRlM1KJcClHniU72XhrXRmHDLDy6m_97rMVvqmOiJzdP6_UHXK-eC3tsMpTmmay_0lGuAFS_IArHnKZ9Z-4nWbM6fOWDjosWFGZIK59GclfpJR6yCOw_RwBZoAF0&amp;t=633952407660000000" type="text/javascript"></script>
+<script src="/WebResource.axd?d=WFmONxQ-nOTQB43mNl0-30NM2X1zzDAr3icWsmjDw2HqiX61et28DgMKfHwi5QbNXa7q4DjMBuOnFKN1C88oX8eHhzwrISAZ8ykGzq6Hy1i_q950UbGzdOmfUTh_5edS2aB2agxcXSbD-RLV3VqFWR1CzfAXAGMmqiN6aDhC1okdumtGYKWdEVpREPl-FkoWYkoGnw2&amp;t=633952407680000000" type="text/javascript"></script> 
+<style type="text/css">
+<!--
+.igt_align {vertical-align:middle;}
+-->
+</style>
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgKw7vqFAgLwmKT0CXkGLtPKvrfyYpr18ByZTlSqFDak">
+</div>
+        
+    <div id="header">
+       
+        <div id="subCabecera">
+            
+                <img src="Styles/Pages/Images/logo.png" alt="" class="h1">
+                <p id="wucHeader_fecha" class="fecha"><span id="wucHeader_cmdFechaProceso" onclick="javascript:ExecEntTpAccion('D4C7D2F779EB3718','7166F2C70C3BCE99','37CE9B6AC506730E1A69281F9EF932B2F9BE253D1430B785297727A3F61B206296E9D4CC80387C22',420,225,0,null,null,null,'31253AEAE14E44AC',null,null);">miércoles, 11 de noviembre de 2020</span></p>
+                
+        </div>
+    </div>
+             
+        <table class="herramientas">
+
+            
+            <tbody><tr>
+                <td id="usuarioId">
+                    <img src="Styles/Pages/Images/user.png" alt="Usuario" title="Usuario">
+                    <span id="lblUsuario">Matias  Luna</span>
+                </td>
+                <td id="globalsearch" style="padding-top: 7px;">
+                    <div class="search-wrapper">
+                        <span class="left">
+                            <input type="image" name="cmdBuscar" id="cmdBuscar" src="Styles/Pages/Images/searchfield_leftcap.png" alt="Buscar" style="border-width:0px;">
+                        </span>
+                        <input type="hidden" name="txtBuscar" id="txtBuscar" value="Buscar"><input type="hidden" name="txtBuscar_p" id="txtBuscar_p" value="Buscar"><input type="text" style="color:gray;" class="prettysearch input" value="Buscar" id="igtxttxtBuscar" onfocus="WaterMark(this, event);" onblur="WaterMark(this, event);" editid="txtBuscar" autocomplete="off">
+                    </div>
+
+                    <div style="display:inline-block; width:200px; height: 23px; float:right; margin-right:100px;">
+                    <div id="WarpAvisos" style="width:100%;height:100%;" align="Right">
+                        
+                        <a id="lnkAvisos" onclick="" style="font-family:Arial;margin-left:6px; vertical-align: middle"></a>                                        
+                    </div>   
+                        </div>                 
+                </td>
+
+        
+
+
+      
+
+                <td id="salir">
+                    <a id="cmdSalir" href="frwLinkRedirector.aspx?MAC=E3677E25CCEB6317">
+                        <img src="Styles/Pages/Images/exit.png" alt="Salir" title="Salir">
+                        <span id="lblSalir">Salir</span></a></td></tr></tbody></table><div id="pnlMain" style="width:100%;height:100%;">
+            <table id="ContentCommon">
+                <tbody><tr>
+                    <td id="MenuLateral">
+                        
+
+<div container="1" style="overflow:hidden;position:absolute;visibility:hidden;display:none;z-index:11999;">
+<div submenu="1" id="webMenuSistema_MainM" class=" igmn_Island igmn_Island et_ContextMenu_Island" style="position:relative;" tabindex="0">
+<div scrolldiv="1"><table border="0" cellpadding="2" cellspacing="0" class=" igmn_Island igmn_Island et_ContextMenu_Island" style="position:relative;border-width:0;">
+<tbody><tr igitem="1"><td><table width="100%" cellpadding="2" cellspacing="0" id="webMenuSistema_1" ighov="igmn_TopLevelHover et_ContextMenu_TopLevelHoverItem ig_Hover igmn_Hover" igtop="1" accesskey="CONFIGMENU" class="igmn_TopLevelLeaf igmn_Leaf ig_Item igmn_Item et_ContextMenu_Item">
+<tbody><tr><td width="25px"><img src="/App_Themes/ETSNew/Controls/UltraWebMenu/Images/mnu_configUsrMenu.gif"></td><td igtxt="1" align="left">
+<nobr>Administrar mi menú</nobr>
+</td><td width="15"></td></tr></tbody></table></td></tr>
+<tr igitem="1"><td><table width="100%" cellpadding="2" cellspacing="0" id="webMenuSistema_2" ighov="igmn_TopLevelHover et_ContextMenu_TopLevelHoverItem ig_Hover igmn_Hover" igtop="1" accesskey="SWITCHMENU" class="igmn_TopLevelLeaf igmn_Leaf ig_Item igmn_Item et_ContextMenu_Item">
+<tbody><tr><td width="25px"><img src="/App_Themes/ETSNew/Controls/UltraWebMenu/Images/menu_switch.gif"></td><td igtxt="1" align="left">
+<nobr>Cambiar Menu</nobr>
+</td><td width="15"></td></tr></tbody></table></td></tr>
+</tbody></table></div><input type="hidden" id="webMenuSistema" name="webMenuSistema" value="">
+</div></div>
+
+<style type="text/css">
+<!--
+
+-->
+</style>
+
+<div id="abs_webMenuSistema" style="display:none"></div><input type="hidden" id="pnlMenu_hidden" name="pnlMenu_hidden"><table id="pnlMenu" class="pnlMenuctl ig_Control igpnl_Control" cellspacing="0" cellpadding="0">
+	<tbody><tr><td class="pnlMenuhdrxpnd  ig_Header igpnl_HeaderExpanded" id="pnlMenu_header" align="Center" style="display:none;"><img id="pnlMenu_header_img" collapsedurl="App_Themes/Infragistics/Default/images/igpnl_dwn.gif" expandedurl="App_Themes/Infragistics/Default/images/igpnl_up.gif" src="App_Themes/Infragistics/Default/images/igpnl_up.gif" style="float:right"></td></tr><tr><td class="pnlMenupnl et_Menu_Panel_Sistema igpnl_Panel" id="pnlMenu_content" style="width:100%;height:100%;"><div style="height:100%;width:100%"><div class="et_Menu_Title">Menú del sistema&nbsp;</div><span style="display:none" id="pnlMenu_trvMenu" name="pnlMenu_trvMenu"></span><input type="hidden" id="pnlMenu$trvMenu" name="pnlMenu$trvMenu" value=""><span style="display:none;"></span>
+<style type="text/css">
+<!--
+
+-->
+</style>
+<div title="" id="T_pnlMenutrvMenu" tabindex="0" clr2="true" onmouseover="javascript:igtree_mouseover(event,'pnlMenutrvMenu');" onmouseout="javascript:igtree_mouseout(event,'pnlMenutrvMenu');" onkeydown="javascript:igtree_keydown(event,'pnlMenutrvMenu');" onkeyup="javascript:igtree_keyup(event,'pnlMenutrvMenu');" onclick="javascript:igtree_nodeclick(event,'pnlMenutrvMenu');" ondblclick="javascript:igtree_dblclick(event,'pnlMenutrvMenu');" oncontextmenu="javascript:igtree_contextmenu(event,'pnlMenutrvMenu');" onselectstart="javascript:igtree_selectStart();" onscroll="javascript:igtree_onscroll('pnlMenutrvMenu');" class="ig_Control igtr_Control et_MenuArbol" style="overflow: hidden; cursor: default;"><nobr><div align="left" id="M_pnlMenutrvMenu"><div id="pnlMenutrvMenu_1" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="TBL"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Tablas</span></div><div id="M_pnlMenutrvMenu_1" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_1_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="ESTRCOMERCIAL"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Estructura Comercial</span></div><div id="pnlMenutrvMenu_1_2" class=" igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="ENTIDADES"><img style="margin-left:20px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Entidades</span></div><div id="M_pnlMenutrvMenu_1_2" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_1_2_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="DATOSRELENT"><img style="width:16px;height:0px;margin-left:40px;"><span igtxt="1">Datos Relacionados</span></div></div><div id="pnlMenutrvMenu_1_3" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="UBICACIONGEOGRAFICA"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Ubicación Geográfica</span></div><div id="pnlMenutrvMenu_1_4" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="REGIONALIZACION"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Regionalización</span></div><div id="pnlMenutrvMenu_1_5" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="GENERALES"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Generales</span></div><div id="pnlMenutrvMenu_1_6" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="IMPUESTOS"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Impuestos</span></div><div id="pnlMenutrvMenu_1_7" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="COEFAJUSTE"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Coeficiente de Ajuste</span></div></div><div id="pnlMenutrvMenu_2" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="CUENTAS"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Administración de Cuentas</span></div><div id="M_pnlMenutrvMenu_2" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_2_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="DATOSRELCMT"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Datos Relacionados</span></div><div id="pnlMenutrvMenu_2_2" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="AUTORIZADOS"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Manejo de Autorizados</span></div></div><div id="pnlMenutrvMenu_3" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="INSTR"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Administración de Instrumentos</span></div><div id="M_pnlMenutrvMenu_3" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_3_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="DATOSRELINSTR"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Datos Relacionados</span></div></div><div id="pnlMenutrvMenu_4" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="ARANCELESGTOS"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Administración de Aranceles / Gastos</span></div><div id="M_pnlMenutrvMenu_4" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_4_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="DEFDERECHOSGTOS"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Derechos</span></div><div id="pnlMenutrvMenu_4_2" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="DEFARANCELESGTOS"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Arancel</span></div><div id="pnlMenutrvMenu_4_3" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="OTROSGTOS"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Otros Gastos</span></div></div><div id="pnlMenutrvMenu_5" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="OPERACIONES"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Gestión de Operaciones</span></div><div id="M_pnlMenutrvMenu_5" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_5_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="OPERACIONESMAE"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">MAE</span></div><div id="pnlMenutrvMenu_5_2" class=" igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="OPERACIONESMERV"><img style="margin-left:20px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">BYMA</span></div><div id="M_pnlMenutrvMenu_5_2" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_5_2_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="NEGCPDYPAGARES"><img style="width:16px;height:0px;margin-left:40px;"><span igtxt="1">Negociación de CPD, FCE y Pagarés</span></div><div id="pnlMenutrvMenu_5_2_2" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="POSICIONES"><img style="width:16px;height:0px;margin-left:40px;"><span igtxt="1">Posiciones</span></div><div id="pnlMenutrvMenu_5_2_3" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="TRADING"><img style="width:16px;height:0px;margin-left:40px;"><span igtxt="1">Trading</span></div></div><div id="pnlMenutrvMenu_5_3" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="OPERACIONESROFEX"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">ROFEX</span></div><div id="pnlMenutrvMenu_5_4" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="FCI"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Fondos Comunes de Inversión</span></div><div id="pnlMenutrvMenu_5_5" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="OPERACIONESMEX"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Mercados del Exterior</span></div><div id="pnlMenutrvMenu_5_6" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="COTIZACIONES"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Cotizaciones</span></div><div id="pnlMenutrvMenu_5_7" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="DATOSRELOPER"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Datos Relacionados</span></div></div><div id="pnlMenutrvMenu_6" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="LIQ"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Liquidación</span></div><div id="M_pnlMenutrvMenu_6" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_6_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="TRANSFERENCIA"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Transferencias</span></div></div><div id="pnlMenutrvMenu_7" class=" igtr_Root igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="MOV"><img style="width:16px;height:0px;margin-left:0px;"><span igtxt="1">Movimientos</span></div><div id="pnlMenutrvMenu_8" class=" igtr_Root igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="COMPROBANTES"><img style="width:16px;height:0px;margin-left:0px;"><span igtxt="1">Comprobantes</span></div><div id="pnlMenutrvMenu_9" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="GARANTIAS"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Gestión de Garantías</span></div><div id="M_pnlMenutrvMenu_9" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_9_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="INFORMESGARANTIAS"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Informes</span></div><div id="pnlMenutrvMenu_9_2" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="DATOSRELGARANTIAS"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Datos Relacionados</span></div></div><div id="pnlMenutrvMenu_10" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="CTB"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Contabilidad</span></div><div id="M_pnlMenutrvMenu_10" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_10_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="DEFCTB"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Definiciones</span></div><div id="pnlMenutrvMenu_10_2" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="INFORMESCONTABLES"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Informes Contables</span></div><div id="pnlMenutrvMenu_10_3" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="PROCCTB"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Procesos</span></div><div id="pnlMenutrvMenu_10_4" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="DATOSRELCTB"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Datos Relacionados</span></div></div><div id="pnlMenutrvMenu_11" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="GESTPROVEEDORES"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Gestión de Proveedores</span></div><div id="M_pnlMenutrvMenu_11" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_11_1" class=" igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="PROVEEDORES"><img style="margin-left:20px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Proveedores</span></div><div id="M_pnlMenutrvMenu_11_1" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_11_1_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="DATOSREL"><img style="width:16px;height:0px;margin-left:40px;"><span igtxt="1">Datos Relacionados</span></div></div></div><div id="pnlMenutrvMenu_12" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="INFORMES"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Informes</span></div><div id="M_pnlMenutrvMenu_12" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_12_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="CTASCTES"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Reporte de Cuenta Corriente</span></div><div id="pnlMenutrvMenu_12_2" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="COP"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Copiadores</span></div><div id="pnlMenutrvMenu_12_3" class=" igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="UIF"><img style="margin-left:20px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">UIF</span></div><div id="M_pnlMenutrvMenu_12_3" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_12_3_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="PARAMETROSLAVADODINERO"><img style="width:16px;height:0px;margin-left:40px;"><span igtxt="1">Parámetros de Lavado de Dinero </span></div><div id="pnlMenutrvMenu_12_3_2" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="MONITOREO"><img style="width:16px;height:0px;margin-left:40px;"><span igtxt="1">Monitoreo </span></div></div><div id="pnlMenutrvMenu_12_4" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="CIRCULAR"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Circular</span></div></div><div id="pnlMenutrvMenu_13" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="_INTERFACES"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Interfaces</span></div><div id="M_pnlMenutrvMenu_13" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_13_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="_INTERFACES_ENTRADA"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Entrada</span></div><div id="pnlMenutrvMenu_13_2" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="_INTERFACES_SALIDA"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Salida</span></div><div id="pnlMenutrvMenu_13_3" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="_INTERFACES_COMPARACIONES"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Comparaciones</span></div><div id="pnlMenutrvMenu_13_4" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="_INTERFACES_SERVICIOS"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Servicios</span></div></div><div id="pnlMenutrvMenu_14" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="SEG"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Administración de Seguridad</span></div><div id="M_pnlMenutrvMenu_14" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_14_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="SEGREP"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Reportes</span></div></div><div id="pnlMenutrvMenu_15" class=" igtr_Root igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="PREF"><img style="margin-left:0px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Preferencias</span></div><div id="M_pnlMenutrvMenu_15" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_15_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="SEGSRVMAIL"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Correo Electrónico</span></div><div id="pnlMenutrvMenu_15_2" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="NUMERACION"><img style="width:16px;height:0px;margin-left:20px;"><span igtxt="1">Numeración</span></div><div id="pnlMenutrvMenu_15_3" class=" igtr_Parent ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="CONFCONEXIONSISTEXT"><img style="margin-left:20px; width:0px ">&nbsp;<img src="/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif" imgtype="exp"><img style="width:5px; visibility:hidden;"><span igtxt="1">Configuración Conexión Sistemas Externos</span></div><div id="M_pnlMenutrvMenu_15_3" class=" igtr_Island et_Menu_Panel_Sistema_Arbol_Island" style="display:none;"><div id="pnlMenutrvMenu_15_3_1" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="_PARAMETROSTPOPERACION"><img style="width:16px;height:0px;margin-left:40px;"><span igtxt="1">Parametro Interfaz ROFEX</span></div><div id="pnlMenutrvMenu_15_3_2" class=" igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node" igtag="PARAMETROSINTERFAZSIOPEL"><img style="width:16px;height:0px;margin-left:40px;"><span igtxt="1">Parámetros Interfaz SIOPEL</span></div></div></div></div></nobr><input type="text" id="pnlMenutrvMenu_tb" class="ig_Edit igtr_Edit" style="overflow:hidden;position:absolute;left:0px;top:0px;cursor:text;display:none;" onfocusout="igtree_endedit(true);" value="" onkeydown="igtree_editKeyDown(event,'pnlMenutrvMenu');" onkeyup="igtree_editKeyUp(event,'pnlMenutrvMenu');" ondblclick="igtree_editClickHandler();" onclick="igtree_editClickHandler();"></div></div></td></tr>
+</tbody></table>
+<style type="text/css">
+.pnlMenuctl {border-width:0px;  width:100%; height:100%; } .pnlMenuhdrxpnd {font-size:9pt; border-left-color:Gainsboro; border-top-color:Gainsboro; border-right-color:Gainsboro; border-bottom-color:Gainsboro; border-left-width:1px; border-top-width:1px; border-right-width:1px; border-bottom-width:1px; border-left-style:Solid; border-top-style:Solid; border-right-style:Solid;  color:Black; height:18px; padding-left:2px;  background-image:url(App_Themes/ETSNew/Controls/WebPanel/Images/bkg_tlb.jpg); } .pnlMenuhdrhovr { color:White; } 
+</style></td>
+                    <td id="Contenido">
+                        
+                        
+
+<div container="1" style="overflow:hidden;position:absolute;visibility:hidden;display:none;z-index:11999;">
+<div submenu="1" id="webMenuEnt_MainM" class=" igmn_Island igmn_Island et_ContextMenu_Island" style="position:relative;" tabindex="0">
+<div scrolldiv="1"><table border="0" cellpadding="2" cellspacing="0" class=" igmn_Island igmn_Island et_ContextMenu_Island" style="position:relative;border-width:0;">
+<tbody><tr igitem="1"><td title="Elimina los filtros y formatos del Usuario volviendo a su estado inicial"><table width="100%" cellpadding="2" cellspacing="0" id="webMenuEnt_1" ighov="igmn_TopLevelHover et_ContextMenu_TopLevelHoverItem ig_Hover igmn_Hover" igtop="1" accesskey="RESTGRID" class="igmn_TopLevelLeaf igmn_Leaf ig_Item igmn_Item et_ContextMenu_Item">
+<tbody><tr><td width="25px"><img src="/App_Themes/ETSNew/Controls/UltraWebMenu/Images/blue_arrow_down.gif"></td><td igtxt="1" align="left">
+<nobr><u>R</u>estaurar valores iniciales de la Grilla</nobr>
+</td><td width="15"></td></tr></tbody></table></td></tr>
+<tr igitem="1"><td title="Agrega el ítem a lista de Accesos Directos"><table width="100%" cellpadding="2" cellspacing="0" id="webMenuEnt_2" ighov="igmn_TopLevelHover et_ContextMenu_TopLevelHoverItem ig_Hover igmn_Hover" igtop="1" accesskey="ADDFAV" class="igmn_TopLevelLeaf igmn_Leaf ig_Item igmn_Item et_ContextMenu_Item">
+<tbody><tr><td width="25px"><img src="/App_Themes/ETSNew/Controls/UltraWebMenu/Images/star_half_full.gif"></td><td igtxt="1" align="left">
+<nobr><u>A</u>gregar a Accesos Directos</nobr>
+</td><td width="15"></td></tr></tbody></table></td></tr>
+</tbody></table></div><input type="hidden" id="webMenuEnt" name="webMenuEnt" value="">
+</div></div>
+
+<style type="text/css">
+<!--
+
+-->
+</style>
+
+<div id="abs_webMenuEnt" style="display:none"></div>
+
+<div container="1" style="overflow:hidden;position:absolute;visibility:hidden;display:none;z-index:11999;">
+<div submenu="1" id="webMenuFavEnt_MainM" class=" igmn_Island igmn_Island et_ContextMenu_Island" style="position:relative;" tabindex="0">
+<div scrolldiv="1"><table border="0" cellpadding="2" cellspacing="0" class=" igmn_Island igmn_Island et_ContextMenu_Island" style="position:relative;border-width:0;">
+<tbody><tr igitem="1"><td title="Quita el ítem de lista de Accesos Directos"><table width="100%" cellpadding="2" cellspacing="0" id="webMenuFavEnt_1" ighov="igmn_TopLevelHover et_ContextMenu_TopLevelHoverItem ig_Hover igmn_Hover" igtop="1" accesskey="DELFAV" class="igmn_TopLevelLeaf igmn_Leaf ig_Item igmn_Item et_ContextMenu_Item">
+<tbody><tr><td width="25px"><img src="/App_Themes/ETSNew/Controls/UltraWebMenu/Images/mnu_fmtflt_del.gif"></td><td igtxt="1" align="left">
+<nobr>Quitar <u>d</u>e Accesos Directos</nobr>
+</td><td width="15"></td></tr></tbody></table></td></tr>
+</tbody></table></div><input type="hidden" id="webMenuFavEnt" name="webMenuFavEnt" value="">
+</div></div>
+
+<style type="text/css">
+<!--
+
+-->
+</style>
+
+<div id="abs_webMenuFavEnt" style="display:none"></div>
+
+<div container="1" style="overflow:hidden;position:absolute;visibility:hidden;display:none;z-index:11999;">
+<div submenu="1" id="webMenuAcc_MainM" class=" igmn_Island igmn_Island et_ContextMenu_Island" style="position:relative;" tabindex="0">
+<div scrolldiv="1"><table border="0" cellpadding="2" cellspacing="0" class=" igmn_Island igmn_Island et_ContextMenu_Island" style="position:relative;border-width:0;">
+<tbody><tr igitem="1"><td title="Agregar nuevo item"><table width="100%" cellpadding="2" cellspacing="0" id="webMenuAcc_1" ighov="igmn_TopLevelHover et_ContextMenu_TopLevelHoverItem ig_Hover igmn_Hover" igtop="1" accesskey="ADD" class="igmn_TopLevelLeaf igmn_Leaf ig_Item igmn_Item et_ContextMenu_Item">
+<tbody><tr><td width="25px"><img src="/App_Themes/ETSNew/Controls/UltraWebMenu/Images/menu_add.gif"></td><td igtxt="1" align="left">
+<nobr><u>A</u>gregar</nobr>
+</td><td width="15"></td></tr></tbody></table></td></tr>
+<tr igitem="1"><td title="Buscar información"><table width="100%" cellpadding="2" cellspacing="0" id="webMenuAcc_2" ighov="igmn_TopLevelHover et_ContextMenu_TopLevelHoverItem ig_Hover igmn_Hover" igtop="1" accesskey="FIND" class="igmn_TopLevelLeaf igmn_Leaf ig_Item igmn_Item et_ContextMenu_Item">
+<tbody><tr><td width="25px"><img src="/App_Themes/ETSNew/Controls/UltraWebMenu/Images/menu_find.gif"></td><td igtxt="1" align="left">
+<nobr>Buscar</nobr>
+</td><td width="15"></td></tr></tbody></table></td></tr>
+</tbody></table></div><input type="hidden" id="webMenuAcc" name="webMenuAcc" value="">
+</div></div>
+
+<style type="text/css">
+<!--
+
+-->
+</style>
+
+<div id="abs_webMenuAcc" style="display:none"></div><p class="et_Content_Title">
+                                    <span id="lblTitulo"></span></p>&nbsp;&nbsp; </td>
+                    <td id="PanelDerecho">
+                        <table>
+                            <tbody><tr>
+                                <td>
+                                    <div id="warpAsyncFav" class="et_PanelDerecho_Refresh" style="width:100%;height:100%;">
+                                        <input type="hidden" id="webPanelFav_hidden" name="webPanelFav_hidden"><table id="webPanelFav" class="webPanelFavctl et_PanelDerecho ig_Control igpnl_Control" cellspacing="0" cellpadding="0">
+	<tbody><tr><td class="webPanelFavhdrxpnd et_PanelDerecho_Header_Expanded" id="webPanelFav_header" align="Center" style="display:;"><img id="webPanelFav_header_img" collapsedurl="/WebResource.axd?d=v0c37YUs-oIUO4ydH1i-6hYCqgieLKVjuKnE6KGQ4w6pHt47ngMK4-3V6GQ26ZcMVlMnIt4TOYSWuKEAm5NFNEwhhHYNklsfv5EEXcvM9Udm1QxwrFRuEFqYTb0UGh8YyoyUlpg6C_ERUZ_75R6D_2yBcbiCAvpg_YXE70T8YVurQMAf0&amp;t=633952407660000000" expandedurl="/WebResource.axd?d=pvBD4x1sD6jYBmVqtJxIbSVDHJr6oY0Xbuuf2ydpXewbE-gMep3_vj2LqXG_FSUH3YT75iOzdx8ZVgN1aXiIIiRbGYWKySv5EcwTdFO818TwGJxjUJSnvf0xPdsuIc9A7TJrKNnZcGWM_t8xHQB8k9QvZ8aLSMeLXkqBYq6pm3yqD75X0&amp;t=633952407660000000" src="/WebResource.axd?d=pvBD4x1sD6jYBmVqtJxIbSVDHJr6oY0Xbuuf2ydpXewbE-gMep3_vj2LqXG_FSUH3YT75iOzdx8ZVgN1aXiIIiRbGYWKySv5EcwTdFO818TwGJxjUJSnvf0xPdsuIc9A7TJrKNnZcGWM_t8xHQB8k9QvZ8aLSMeLXkqBYq6pm3yqD75X0&amp;t=633952407660000000" style="float:right">Accesos Directos</td></tr><tr><td class="webPanelFavpnl et_PanelDerecho_Panel" id="webPanelFav_content" style="width:100%;height:100%;"><div style="height:100%;width:100%"></div></td></tr>
+</tbody></table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="warpAsyncUltOp" class="et_PanelDerecho_Refresh" style="width:100%;height:100%;">
+                                        <input type="hidden" id="webPanelUltOp_hidden" name="webPanelUltOp_hidden"><span style="display:none">&nbsp;</span><style type="text/css">
+	.txtBuscar0{}</style><table id="webPanelUltOp" class="webPanelUltOpctl et_PanelDerecho ig_Control igpnl_Control" cellspacing="0" cellpadding="0">
+	<tbody><tr><td class="webPanelUltOphdrxpnd et_PanelDerecho_Header_Expanded" id="webPanelUltOp_header" align="Center" style="display:;"><img id="webPanelUltOp_header_img" collapsedurl="/WebResource.axd?d=v0c37YUs-oIUO4ydH1i-6hYCqgieLKVjuKnE6KGQ4w6pHt47ngMK4-3V6GQ26ZcMVlMnIt4TOYSWuKEAm5NFNEwhhHYNklsfv5EEXcvM9Udm1QxwrFRuEFqYTb0UGh8YyoyUlpg6C_ERUZ_75R6D_2yBcbiCAvpg_YXE70T8YVurQMAf0&amp;t=633952407660000000" expandedurl="/WebResource.axd?d=pvBD4x1sD6jYBmVqtJxIbSVDHJr6oY0Xbuuf2ydpXewbE-gMep3_vj2LqXG_FSUH3YT75iOzdx8ZVgN1aXiIIiRbGYWKySv5EcwTdFO818TwGJxjUJSnvf0xPdsuIc9A7TJrKNnZcGWM_t8xHQB8k9QvZ8aLSMeLXkqBYq6pm3yqD75X0&amp;t=633952407660000000" src="/WebResource.axd?d=pvBD4x1sD6jYBmVqtJxIbSVDHJr6oY0Xbuuf2ydpXewbE-gMep3_vj2LqXG_FSUH3YT75iOzdx8ZVgN1aXiIIiRbGYWKySv5EcwTdFO818TwGJxjUJSnvf0xPdsuIc9A7TJrKNnZcGWM_t8xHQB8k9QvZ8aLSMeLXkqBYq6pm3yqD75X0&amp;t=633952407660000000" style="float:right">Últimas opciones del Menú</td></tr><tr><td class="webPanelUltOppnl et_PanelDerecho_Panel" id="webPanelUltOp_content" style="width:100%;height:100%;"><div style="height:100%;width:100%"><table id="webPanelUltOp_lstUltOp" cellspacing="0" border="0" style="border-collapse:collapse;">
+		<tbody><tr>
+			<td><div style="width:10px;float:left"><img id="webPanelUltOp_lstUltOp_ctl00_imgTemplateTools" class="et_cursor_pointer" onclick="ShowMenuAcc(this,-1,-1,'55C23409167D83D8',500,335);" title="Abrir panel de herramientas" src="App_Themes/ETSNew/Pages/Images/Tools.gif" alt="Abrir panel de herramientas" style="border-width:0px;display:;"></div><div style="width:180px;float:left"><span id="webPanelUltOp_lstUltOp_ctl00_ItemTitle" onclick="ListItem_OnClick('55C23409167D83D8',0,-1,500,335);" title="Abrir Cotizaciones de Monedas">Cotizaciones de Monedas</span></div></td>
+		</tr><tr>
+			<td><div style="width:10px;float:left"><img id="webPanelUltOp_lstUltOp_ctl01_imgTemplateTools" class="et_cursor_pointer" onclick="ShowMenuAcc(this,-1,-1,'F6C1E93E1192ACF0',790,470);" title="Abrir panel de herramientas" src="App_Themes/ETSNew/Pages/Images/Tools.gif" alt="Abrir panel de herramientas" style="border-width:0px;display:;"></div><div style="width:180px;float:left"><span id="webPanelUltOp_lstUltOp_ctl01_ItemTitle" onclick="ListItem_OnClick('F6C1E93E1192ACF0',0,-1,790,470);" title="Abrir Cuentas">Cuentas</span></div></td>
+		</tr><tr>
+			<td><div style="width:10px;float:left"><img id="webPanelUltOp_lstUltOp_ctl02_imgTemplateTools" class="et_cursor_pointer" onclick="ShowMenuAcc(this,-1,-1,'40A740913B8035BC',810,560);" title="Abrir panel de herramientas" src="App_Themes/ETSNew/Pages/Images/Tools.gif" alt="Abrir panel de herramientas" style="border-width:0px;display:;"></div><div style="width:180px;float:left"><span id="webPanelUltOp_lstUltOp_ctl02_ItemTitle" onclick="ListItem_OnClick('40A740913B8035BC',0,-1,810,560);" title="Abrir Operaciones del exterior">Operaciones del exterior</span></div></td>
+		</tr><tr>
+			<td><div style="width:10px;float:left"><img id="webPanelUltOp_lstUltOp_ctl03_imgTemplateTools" class="et_cursor_pointer" onclick="ShowMenuAcc(this,-1,-1,'70EE9298407DC660',765,390);" title="Abrir panel de herramientas" src="App_Themes/ETSNew/Pages/Images/Tools.gif" alt="Abrir panel de herramientas" style="border-width:0px;display:;"></div><div style="width:180px;float:left"><span id="webPanelUltOp_lstUltOp_ctl03_ItemTitle" onclick="ListItem_OnClick('70EE9298407DC660',0,-1,765,390);" title="Abrir Recibos y Comprobantes de Pago">Recibos y Comprobantes de Pago</span></div></td>
+		</tr><tr>
+			<td><div style="width:10px;float:left"><img id="webPanelUltOp_lstUltOp_ctl04_imgTemplateTools" class="et_cursor_pointer" onclick="ShowMenuAcc(this,0,-1,'6F5E8DFCBF07E7E6',810,795);" title="Abrir panel de herramientas" src="App_Themes/ETSNew/Pages/Images/Tools.gif" alt="Abrir panel de herramientas" style="border-width:0px;display:;"></div><div style="width:180px;float:left"><span id="webPanelUltOp_lstUltOp_ctl04_ItemTitle" onclick="ListItem_OnClick('6F5E8DFCBF07E7E6',1,-1,810,795);" title="Abrir Reporte Cuenta Corriente">Reporte Cuenta Corriente</span></div></td>
+		</tr>
+	</tbody></table></div></td></tr>
+</tbody></table>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    </td></tr></tbody></table></td></tr></tbody></table></div><div id="footerMain">
+            
+
+<table id="esco">
+    <tbody><tr>
+        <td id="copyright"><span id="wucFooter_lblCopyRight">Copyright © 2009 </span><span id="wucFooter_lblAppName">Sistemas Esco S.R.L. EscoTradeSolution v2.01.33.06  (64 bits)  (20200828.1903 v:2013306 sp:4)</span></td>
+        <td id="logoEsco"><a id="imgLogoEsco" href="http://www.sistemasesco.com" target="_blank" title="Sistemas Esco"></a></td>
+    </tr>
+    
+</tbody></table>
+        </div>
+    <input type="hidden" name="_IG_CSS_LINKS_" id="_IG_CSS_LINKS_" value="app_themes/etsnew/favicon.ico|styles/pages/et_main.css|styles/pages/et_autocomplete.css|~/app_themes/etsnew/controls/accordion/ec_accordion.css|~/app_themes/etsnew/controls/comboeditor/ec_comboeditor.css|~/app_themes/etsnew/controls/dateeditor/ec_dateeditor.css|~/app_themes/etsnew/controls/horaeditor/ec_spinhoraeditor.css|~/app_themes/etsnew/controls/layoutcontroller/ec_columna.css|~/app_themes/etsnew/controls/layoutcontroller/ec_controls.css|~/app_themes/etsnew/controls/layoutcontroller/ec_layoutcontroller.css|~/app_themes/etsnew/controls/layoutcontroller/et_blockui.css|~/app_themes/etsnew/controls/numericeditor/ec_numericeditor.css|~/app_themes/etsnew/controls/numericeditor/ec_spinnumericeditor.css|~/app_themes/etsnew/controls/ultrawebmenu/et_ultrawebmenu.css|~/app_themes/etsnew/controls/ultrawebtab/ig_tab.css|~/app_themes/etsnew/controls/webimagebutton/ig_webimagebutton.css|~/app_themes/etsnew/controls/webusercontrols/ec_webusercontrols.css|~/app_themes/etsnew/et_common.css|~/app_themes/etsnew/pages/et_datafmt.css|~/app_themes/etsnew/pages/et_gridrow.css|styles/pages/et_wucheader.css|styles/pages/et_wucfooter.css|app_themes/infragistics/default/ig_tree.css|app_themes/infragistics/default/ig_panel.css|app_themes/infragistics/default/ig_menu.css|app_themes/infragistics/default/ig_shared.css">
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=qedYVb-MUGwZOhHq8csw2B8UI7Sv-tDBSMK7sN9vgmgdlqbEsQIrCLA-KzXIS6LIES2zehB8WE30YMQJjD7jGeyp47o1&t=636316698606689430';
+WebForm_InitCallback();setTimeout("RightInfoLookForUpdatesCallBack()", 1000);
+var lookingRightInfo=setInterval("RightInfoLookForUpdatesCallBack()", 10000);
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+try{igedit_init("txtBuscar",0,"txtBuscar,0 if&nbsp;(window.pressKey)&nbsp;{if&nbsp;(event.keyCode&nbsp;==&nbsp;27)&nbsp;{if&nbsp;(!pressKey()){ig_cancelEvent();}&nbsp;};}; ,1,,,,0,1,1,,,2,1,,-1,",["Buscar"]);}catch(e){window.status="Can't init editor";}
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+try{ig_shared.getCBManager().newPanel('WarpAvisos','WarpAvisos',null,[null,null,null,null,null,10000],null);}catch(e){window.status='Can not init WarpAvisos';}
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+igmenu_webMenuSistema_Menu=[
+"webMenuSistema",3,1,"","ig_Hover igmn_Hover","ig_Selected igmn_TopSelected","/App_Themes/ETSNew/Controls/UltraWebMenu/Images/ig_menuTri.gif",false,"300","90","Fade","#D3D3D3","5","200","1000","","","ig_Disabled igmn_Disabled et_ContextMenu_Disabled","ig_Item igmn_Item et_ContextMenu_Item","App_Themes/Infragistics/Default/images/ig_menu_scrollup.gif","App_Themes/Infragistics/Default/images/ig_menu_scrollup_disabled.gif","App_Themes/Infragistics/Default/images/ig_menu_scrolldown.gif","App_Themes/Infragistics/Default/images/ig_menu_scrolldown_disabled.gif",false,true,"","",true,"ig_Header igmn_Header et_ContextMenu_Header",false,true,false];
+
+igmenu_webMenuSistema_Events = [
+["",0],["",0],["MnuItem_click",0],["",0],["",0]];
+
+	igmenu_initMenu('webMenuSistema');
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+igtree_pnlMenutrvMenu_Tree=["pnlMenu$trvMenu","ig_Item igtr_Selected et_Menu_Panel_Sistema_Arbol_Selected","ig_Hover igtr_Hover et_Menu_Panel_Sistema_Arbol_Hover","/App_Themes/ETSNew/Controls/UltraWebTree/Images/OpnMenu.gif","/App_Themes/ETSNew/Controls/UltraWebTree/Images/CloseMenu.gif",true,false,"App_Themes/Infragistics/Default/images/",false,false,0,false,"","","ig_Disabled igtr_Disabled","","",0,true,"","",false,false,20,false,"igtr_Root","igtr_Parent","igtr_Leaf et_Menu_Panel_Sistema_Arbol_Leaf","","","",true,20061.2,[],["","","",""],["","","",""],"ig_Item igtr_Node et_Menu_Panel_Sistema_Arbol_Node","<b>Loading...</b>",true,false,2,true,true,false];
+igtree_pnlMenutrvMenu_Levels = [];igtree_pnlMenutrvMenu_Events = [["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",1],["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",0],["",0],];
+var igtree_pnlMenutrvMenu_cs=[];
+var opnlMenutrvMenu = igtree_initTree('pnlMenutrvMenu');
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+var pnlMenu_props=["pnlMenu","pnlMenu",true,true,0,[["",false],["",false] ],"pnlMenupnl et_Menu_Panel_Sistema igpnl_Panel",["pnlMenuhdrxpnd  ig_Header igpnl_HeaderExpanded","pnlMenuhdrxpnd  ig_Header igpnl_HeaderExpanded pnlMenuhdrclps  ig_Header igpnl_HeaderCollapsed","pnlMenuhdrhovr  ig_Header igpnl_HeaderHover" ],'100%','100%' ];
+var pnlMenu=ig_CreateWebPanel("pnlMenu",pnlMenu_props);
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+igmenu_webMenuEnt_Menu=[
+"webMenuEnt",3,1,"","ig_Hover igmn_Hover","ig_Selected igmn_TopSelected","/App_Themes/ETSNew/Controls/UltraWebMenu/Images/ig_menuTri.gif",false,"300","90","Fade","#D3D3D3","5","200","1000","","","ig_Disabled igmn_Disabled et_ContextMenu_Disabled","ig_Item igmn_Item et_ContextMenu_Item","App_Themes/Infragistics/Default/images/ig_menu_scrollup.gif","App_Themes/Infragistics/Default/images/ig_menu_scrollup_disabled.gif","App_Themes/Infragistics/Default/images/ig_menu_scrolldown.gif","App_Themes/Infragistics/Default/images/ig_menu_scrolldown_disabled.gif",false,true,"","",true,"ig_Header igmn_Header et_ContextMenu_Header",false,true,false];
+
+igmenu_webMenuEnt_Events = [
+["",0],["",0],["MnuItem_click",0],["",0],["",0]];
+
+	igmenu_initMenu('webMenuEnt');
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+igmenu_webMenuFavEnt_Menu=[
+"webMenuFavEnt",3,1,"","ig_Hover igmn_Hover","ig_Selected igmn_TopSelected","/App_Themes/ETSNew/Controls/UltraWebMenu/Images/ig_menuTri.gif",false,"300","90","Fade","#D3D3D3","5","200","1000","","","ig_Disabled igmn_Disabled et_ContextMenu_Disabled","ig_Item igmn_Item et_ContextMenu_Item","App_Themes/Infragistics/Default/images/ig_menu_scrollup.gif","App_Themes/Infragistics/Default/images/ig_menu_scrollup_disabled.gif","App_Themes/Infragistics/Default/images/ig_menu_scrolldown.gif","App_Themes/Infragistics/Default/images/ig_menu_scrolldown_disabled.gif",false,true,"","",true,"ig_Header igmn_Header et_ContextMenu_Header",false,true,false];
+
+igmenu_webMenuFavEnt_Events = [
+["",0],["",0],["MnuItem_click",0],["",0],["",0]];
+
+	igmenu_initMenu('webMenuFavEnt');
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+igmenu_webMenuAcc_Menu=[
+"webMenuAcc",3,1,"","ig_Hover igmn_Hover","ig_Selected igmn_TopSelected","/App_Themes/ETSNew/Controls/UltraWebMenu/Images/ig_menuTri.gif",false,"300","100","NotSet","#D3D3D3","5","200","1000","","","ig_Disabled igmn_Disabled et_ContextMenu_Disabled","ig_Item igmn_Item et_ContextMenu_Item","App_Themes/Infragistics/Default/images/ig_menu_scrollup.gif","App_Themes/Infragistics/Default/images/ig_menu_scrollup_disabled.gif","App_Themes/Infragistics/Default/images/ig_menu_scrolldown.gif","App_Themes/Infragistics/Default/images/ig_menu_scrolldown_disabled.gif",false,true,"","",true,"ig_Header igmn_Header et_ContextMenu_Header",false,true,false];
+
+igmenu_webMenuAcc_Events = [
+["",0],["",0],["MnuItem_click",0],["",0],["",0]];
+
+	igmenu_initMenu('webMenuAcc');
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+var webPanelFav_props=["webPanelFav","webPanelFav",true,true,0,[["",false],["",false] ],"webPanelFavpnl et_PanelDerecho_Panel",["webPanelFavhdrxpnd et_PanelDerecho_Header_Expanded","webPanelFavhdrxpnd et_PanelDerecho_Header_Expanded","webPanelFavhdrhovr et_PanelDerecho_Header_Hover" ],'','' ];
+var webPanelFav=ig_CreateWebPanel("webPanelFav",webPanelFav_props);
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+try{ig_shared.getCBManager().newPanel('warpAsyncFav','warpAsyncFav',null,[],null);}catch(e){window.status='Can not init warpAsyncFav';}
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+var webPanelUltOp_props=["webPanelUltOp","webPanelUltOp",true,true,0,[["",false],["",false] ],"webPanelUltOppnl et_PanelDerecho_Panel",["webPanelUltOphdrxpnd et_PanelDerecho_Header_Expanded","webPanelUltOphdrxpnd et_PanelDerecho_Header_Expanded","webPanelUltOphdrhovr et_PanelDerecho_Header_Hover" ],'','' ];
+var webPanelUltOp=ig_CreateWebPanel("webPanelUltOp",webPanelUltOp_props);
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+try{ig_shared.getCBManager().newPanel('warpAsyncUltOp','warpAsyncUltOp',null,[],null);}catch(e){window.status='Can not init warpAsyncUltOp';}
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+try{ig_shared.getCBManager().newPanel('pnlMain','pnlMain',null,[],null);}catch(e){window.status='Can not init pnlMain';}
+//]]>
+</script></form>
+    <script src="Scripts/scr_frwMain.js" type="text/javascript"></script>
+    <script src="Scripts/scr_JQuery.Plugin.Autocomplete.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function RefrescarMain(pRefrescar) {
+            if (pRefrescar == true) {
+                window.location = window.location.href;
+            }
+        }
+
+        jQuery(function () {
+            options = {
+                serviceUrl: 'Handlers/hdAutocomplete.ashx',
+                onSelect: function (value, data) { setTimeout(data, 0); }
+            };
+            a = $('#igtxttxtBuscar').autocomplete(options);
+        });
+
+    </script>
+
+
+    
+
+
+       
+   
+
+
+
+
+<div id="AutocompleteContainter_7ba14" style="position: absolute; z-index: 9999; top: 108px; left: 231px;"><div class="autocomplete-w1"><div class="autocomplete" id="Autocomplete_7ba14" style="display: none; width: 200px; max-height: 300px;"></div></div></div><img src="/WebResource.axd?d=vQ686CSv6SUjQtXm1OlnkEFJlsSi9aqfmAsV7J3_dw4Mr74-aU9-q8T-nPxhoBasfALDZkiSgme6yiThLhS7ii3M5EEr4BTiB03fCOuxsGoQXk-wQ_TsFVtwe2oUxUSI_hd0T6H496qC6qqV45BzJWi6uwiOdWSMXzgqtEr-znghOqXN0&amp;t=633952407660000000" style="position: absolute; visibility: visible; z-index: 10000; left: 570px; top: 87px; display: none;"></body>

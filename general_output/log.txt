@@ -1,0 +1,223 @@
+Log Entry: 2021-02-18 10:29:26.920050
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]## Log: 2021-02-24 11:09:20.128302
+path_on_error: //*[@id='cellimgcmdEliminarKey']//img[@name='imgcmdEliminarKey']
+#################################
+## Log: 2021-02-25 09:33:08.152454
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 09:54:01.809497
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 10:14:58.201936
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 10:24:32.981593
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 10:32:52.651683
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 11:20:30.335305
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 11:25:18.088208
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 11:30:30.256782
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 11:37:45.405180
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 11:43:01.075434
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 11:46:14.607259
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 11:51:14.036671
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 12:12:27.870913
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 12:19:41.105105
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-25 17:34:22.347905
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-26 08:33:18.855297
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-02-26 08:39:16.029294
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-03-02 10:43:11.166922
+path_on_error: //*[@id='igtxttxtBuscar']
+#################################
+## Log: 2021-03-02 10:44:59.557016
+path_on_error: //*[@id='igtxttxtBuscar']
+#################################
+## Log: 2021-03-02 10:50:13.419235
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-03-02 10:53:42.707716
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-03-03 08:40:29.568565
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-03-03 08:43:41.306574
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-03-03 08:56:37.524884
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-03-03 18:19:50.775961
+path_on_error: //*[@id='igtxttxtBuscar']
+#################################
+## Log: 2021-03-09 15:23:37.190695
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 15:24:57.970497
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 15:26:56.555554
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:23:13.644180
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:24:38.956171
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:25:33.211510
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:25:33.224985
+path_on_error: //Input[@id='pnlDatosGenerales_chkPermiteOperar']
+#################################
+## Log: 2021-03-09 16:27:20.849559
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:27:20.859101
+path_on_error: //Input[@id='pnlDatosGenerales_chkPermiteOperar']
+#################################
+## Log: 2021-03-09 16:28:18.641312
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:28:18.648307
+path_on_error: //Input[@id='pnlDatosGenerales_chkPermiteOperar']
+#################################
+## Log: 2021-03-09 16:31:30.710491
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:31:30.719747
+path_on_error: //Input[@id='pnlDatosGenerales_chkPermiteOperar']
+#################################
+## Log: 2021-03-09 16:32:48.190652
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:35:02.233429
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:35:04.584221
+path_on_error: //input[@id='pnlDatosGenerales_chkTiposOperaciones_4']
+#################################
+## Log: 2021-03-09 16:36:34.448022
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:36:34.455610
+path_on_error: //Input[@id='pnlDatosGenerales_chkPermiteOperar']
+#################################
+## Log: 2021-03-09 16:38:00.051870
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:38:00.060612
+path_on_error: //Input[@id='pnlDatosGenerales_chkPermiteOperar']
+#################################
+## Log: 2021-03-09 16:40:19.502906
+path_on_error: //Input[@id='pnlDatosGenerales_chkPermiteOperar']
+#################################
+## Log: 2021-03-09 16:41:55.964655
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:41:55.974049
+path_on_error: //Input[@id='pnlDatosGenerales_chkPermiteOperar']
+#################################
+## Log: 2021-03-09 16:43:05.830887
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:43:05.842057
+path_on_error: //Input[@id='pnlDatosGenerales_chkPermiteOperar']
+#################################
+## Log: 2021-03-09 16:44:39.903811
+path_on_error: //table[@id='tblComboGlobal'][not(contains(@style,'display: none'))]//td[contains(text(),'ETSProduccion')]
+#################################
+## Log: 2021-03-09 16:45:50.324489
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:45:52.519957
+path_on_error: //input[@id='pnlDatosGenerales_chkTiposOperaciones_4']
+#################################
+## Log: 2021-03-09 16:47:11.637874
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:48:01.661894
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:48:55.429457
+path_on_error: //select[@id='pnlDatosGenerales_cmbCuentas']/option[not(contains(text(),'Seleccionar'))]
+#################################
+## Log: 2021-03-09 16:48:55.441497
+path_on_error: //Input[@id='pnlDatosGenerales_chkPermiteOperar']
+#################################
+## Log: 2021-03-09 16:49:33.358039
+path_on_error: //table[@id='tblComboGlobal'][not(contains(@style,'display: none'))]//td[contains(text(),'ETSProduccion')]
+#################################
+## Log: 2021-04-09 12:08:55.786555
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-04-09 12:11:42.533057
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-04-09 12:16:25.113313
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-04-09 12:20:32.791787
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-04-09 12:22:52.830867
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-04-09 12:24:15.940597
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-04-09 12:26:15.866678
+path_on_error: //*[@id='DFGrid']//tr[starts-with(@id, 'DFGrid_') and not(contains(@class,'anulado')) and not(td[@id='c10']/p[text()='APEX'])]
+#################################
+## Log: 2021-04-12 11:02:52.393528
+path_on_error: //*[@id='DFGrid_divcontainer']
+#################################
+## Log: 2021-04-21 09:34:49.310229
+path_on_error: //*[@id='igtxttxtBuscar']
+#################################
+## Log: 2021-04-23 09:01:51.958671
+path_on_error: //*[@id='igtxttxtBuscar']
+#################################
+## Log: 2021-04-23 09:43:04.003963
+path_on_error: //*[@id='igtxttxtBuscar']
+#################################
+## Log: 2021-04-23 10:06:34.971497
+path_on_error: //tr[@id='cboDesdegrd_0']//td[2]
+#################################
+## Log: 2021-04-23 10:16:55.779806
+path_on_error: //tr[@id='cboDesdegrd_0']//td[2]
+#################################
+## Log: 2021-04-23 10:21:15.931988
+path_on_error: //tr[@id='cboDesdegrd_0']//td[2]
+#################################
+## Log: 2021-04-23 10:25:36.038133
+path_on_error: //tr[@id='cboDesdegrd_0']//td[2]
+#################################

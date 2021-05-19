@@ -1,0 +1,188 @@
+0-chromedriver y atom (no son necesario)
+
+
+
+                https://chromedriver.chromium.org/downloads  (por el momento se usa la version 83)
+
+
+
+1-Instalar python  (para windows desde -> https://www.python.org/downloads/release/python-382/)   con esta version ya viene instalado PIP
+
+      python-3.8.2-amd64-webinstall.exe
+
+     tildar agregar path
+
+
+2-instalar git     descargar desde:   https://git-scm.com/download/win
+
+
+3-correr comandos
+
+ssh-keygen
+
+ssh-agent.exe
+
+cat /c/Users/dtisher/.ssh/id_rsa.pub
+
+
+
+
+
+4-
+git clone --recurse-submodules git@bitbucket.org:consultatio/rpa.git
+git submodule update --remote fusap_rpa_test_fwk
+
+
+
+5-
+En Windows:
+
+Instalar el MYSQL
+=======================
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient
+
+tiene que ser apropiado de acuerdo a la version de Python instalada
+(por ejemplo:    mysqlclient‑1.4.6‑cp38‑cp38‑win_amd64.whl   para python 3.8 )
+
+(pararse donde esta el archivo whl y ejecutar:
+pip install mysqlclient‑1.4.6‑cp38‑cp38‑win_amd64.whl
+path de donde se descargo el archivo/mysqlclient‑1.4.6‑cp38‑cp38‑win_amd64.whl).
+
+"tambien se puede ejecutar: pip install mysqlclient==1.3.4 por si no reconoce el modulo MySQLdb"
+
+
+
+Instalar el SQLSERVER
+=======================
+Instalar el controlador ODBC para windows(32 o 64 bits)
+https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15-
+
+en el instalador elegir la opcion de abajo(odbc sql driver 17) (SQL SERVER)
+
+
+
+
+6-
+pip install -r fusap_rpa_test_fwk/install/requirements.txt
+
+Si sale error
+building 'pyodbc' extension
+error: Microsoft Visual C++ 14.0 is required. Get it with "Build Tools for Visual Studio": https://visualstudio.microsoft.com/downloads/
+
+
+instalar "Build Tools for Visual Studio"
+https://visualstudio.microsoft.com/es/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16
+
+
+##### ATENCIÓN!!!!!!!!
+CHEQUEAR LAS BUILD TOOLS, se encuentran en el instalador
+
+
+
+
+6-adaptar local_data.ini ambiente local  de usuario
+
+
+
+
+              EJECUCION en WINDOWS
+
+ Hay que ejecutar siempre como administrador la consola y carpetas de WINDOWS:
+
+
+            CONSOLA:
+                      buscar "SIMBOLOS DEL SISTEMA" -> "Abrir ubicacion del archivo" -> boton derecho sobre simbolo del sistema -> propiedades -> acceso directo -> opciones avanzadas -> tildar "EJECUTAR COMO ADMINISTRADOR" -> aceptar y aceptar
+
+            Sobre el acceso directo.... (no sobre la carpeta raiz):
+
+                      boton derecho -> acceso directo -> opciones avanzadas -> tildar ejecutar como administrador -> aceptar aceptar
+
+
+
+
+        Si hay problemas de permisos para eliminar/crear,etc carpetas o archivos(por ejemplo en Program Files) hacer estos pasos:
+
+
+                           -Seleccionar el archivo/carpeta a daministrar -> boton derecho -> propiedades -> seguridad -> opciones avanzadas -> cambiar -> en "nombre del
+                           objeto a seleccionar" ingresamos nuestro usuario -> comprobar nombres -> aceptar -> tildar "Reemplazar propietario en subcontenedores y objetos" -> en solapa AUDITORIA tildar "Reemplazar todas las entradas de auditoria de objetos secundarios por entradas de auditoria heredables de este objeto" -> en solapa PERMISOS tildar "Reemplazar todas las entradas de permisos de objetos secundarios por entradas de permisos heredables de este objeto" -> aplicar/aceptar
+
+                        -Nuevamente en el archivo/carpeta -> boton derecho -> propiedades -> seguridad -> editar -> elegimos el usuario que le vamos a dar los permisos -> tildar control total -> aplicar/aceptar
+
+
+
+
+         Para ejecutar siempre como administrador un archivo en windows 10:
+
+                          -Boton derecho sobre el archivo/carpeta -> propiedades -> acceso directo -> en el campo DESTINO escribir (sin borrar la ruta que ya esta) adelante de todo:  runas.exe /user:Administrador /savedcred -> aplicar/aceptar.
+
+                          -Nuevamente Boton derecho sobre el archivo/carpeta -> propiedades -> opciones avanzadas -> tildar "Ejecutar como administrador" -> aceptar. Se puede ejecutar el archivo/carpeta e ingresar la clave del administrador
+
+
+
+
+
+7-para debugguear correr las primeras lineas  del bat
+
+
+#################################################################
+
+
+
+            en LINUX
+
+para debugguear correr las primeras lineas  del sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+para correr el script de automatizacion en IE, siga los pasos a continuación para habilitar el modo protegido para todas las zonas:
+
+
+        Abra Internet Explorer
+        Vaya al menú Herramientas  - Opciones de Internet
+        Seleccionar pestaña de seguridad
+        En Seleccione una zona para ver o cambiar la configuración de seguridad, elija Internet  y seleccione la casilla de verificación  Activar modo protegido (requiere reiniciar Internet Explorer).
+        Del mismo modo, seleccione la casilla de verificación  Activar modo protegido (requiere reiniciar Internet Explorer) para otros tres, como Intranet local , Sitios de confianza y Sitios restringidos .
+
+        IEDriverServer de 64 bits hay que hacer: configuración->opciones de internet->opciones avanzadas->en la seccion SEGURIDAD tildar "Habilitar modo protegido mejorado"
+
+        IEDriverServer de 32 bits
+                        IE abierto
+                        Opciones de Internet → Avanzado → Seguridad
+                        Desmarcar ☐ Habilite procesos de 64 bits para el Modo protegido mejorado
+                        Haga clic en Aplicar y en Aceptar
+
+        capaz hay que hacer: configuracion -> opciones de internet -> seguridad -> nivel personalizado -> en autenticacion del usuario "tildar" inicio de sesion automatico con el nombre de usuario y contraseñas actuales
+
+crear acceso directo del archivo BAT y configurarlo para acceder siempre como administrador
+
+
+
+
+
+
+
+
+
+CREANDO LOS ACCESOS DIRECTOS y DISTRIBUYENDOLOS EN CARPETAS POR SEPARADO EN WINDOWS
+
+   crear los accesos directos de run.bat y run.sh y ponerlos en carpetas que se llamen de acuerdo al script en cuestion y tambien un acceso directo de output y ponerlo en la carpeta tesoreria,cotizacion,UIF,etc segun corresponda
+
+
+
+
+
+
+CONFLUENCE##############################
+
+pip install xlsxwriter     ###para escribir en los excel
+pip install xlrd   ###para leer los excel

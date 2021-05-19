@@ -1,0 +1,439 @@
+<head id="Head1">
+<link href="app_themes/infragistics/default/ig_shared.css" type="text/css" rel="stylesheet">
+<link href="app_themes/infragistics/default/ig_textedit.css" type="text/css" rel="stylesheet"><title>
+
+</title>
+    <script language="JavaScript" src="scripts/EscoNET.UI.Controls.Web.DatePicker.js" type="text/javascript"></script>
+    
+    
+    
+    
+
+    <link href="styles/style.css" type="text/css" rel="stylesheet">    
+   
+    
+
+    <script type="text/javascript">
+        function stringToDate(_date, _format, _delimiter) {
+            var formatLowerCase = _format.toLowerCase();
+            var formatItems = formatLowerCase.split(_delimiter);
+            var dateItems = _date.split(_delimiter);
+            var monthIndex = formatItems.indexOf("mm");
+            var dayIndex = formatItems.indexOf("dd");
+            var yearIndex = formatItems.indexOf("yyyy");
+            var month = parseInt(dateItems[monthIndex]);
+            month -= 1;
+            var formatedDate = new Date(dateItems[yearIndex], month, dateItems[dayIndex]);
+            return formatedDate;
+        }
+
+        //stringToDate("17/9/2014", "dd/MM/yyyy", "/");
+        //stringToDate("9/17/2014", "mm/dd/yyyy", "/")
+        //stringToDate("9-17-2014", "mm-dd-yyyy", "-")
+
+        function submitonenter(formid, evt, thisObj) {
+            evt = (evt) ? evt : ((window.event) ? window.event : "")
+            if (evt) {
+                // process event here
+                if (evt.keyCode == 13 || evt.which == 13) {
+                    //document.getElementById('cmdAgregar').click();
+                    if (document.getElementById('cmdAgregar').disabled == false)
+                        AddModif(-1);
+                    else
+                        AddModif(0);
+                }
+            }
+        }
+</script>
+
+
+    <script type="text/javascript">
+
+        //$(document).ready(function () {
+            //$('#txtDesde').keyup(function (event) {
+            //    if (event.keyCode == 13) {
+            //        $('#cmdAgregar').click();
+            //    }
+            //});
+            //$('#txtHasta').keyup(function (event) {
+            //    if (event.keyCode == 13) {
+            //        $('#cmdAgregar').click();
+            //    }
+            //});
+
+            //$('.numericDesde').keyup(function (e) { 
+            //    if (event.keyCode == 13) {
+            //        $('#cmdAgregar').click();
+            //    }
+            //});
+            //$('#numericHasta').keyup(function (event) {
+            //    if (event.keyCode == 13) {
+            //        $('#cmdAgregar').click();
+            //    }
+            //});
+        //});
+    </script>
+
+<link href="App_Themes/ETSNew/Controls/Accordion/ec_Accordion.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/ComboEditor/ec_ComboEditor.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/DateEditor/ec_DateEditor.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/HoraEditor/ec_SpinHoraEditor.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/LayoutController/ec_Columna.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/LayoutController/ec_Controls.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/LayoutController/ec_LayoutController.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/LayoutController/et_BlockUI.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/NumericEditor/ec_NumericEditor.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/NumericEditor/ec_SpinNumericEditor.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/UltraWebMenu/et_UltraWebMenu.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/UltraWebTab/ig_tab.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/WebImageButton/ig_webimagebutton.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Controls/WebUserControls/ec_WebUserControls.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/et_Common.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Pages/et_DataFMT.css" type="text/css" rel="stylesheet"><link href="App_Themes/ETSNew/Pages/et_GridRow.css" type="text/css" rel="stylesheet"><link href="/WebResource.axd?d=NhEQB3y5Dvl8gSfuoocbR0YMrITBv0pRw10ZQ5nDCjwxD5CZutWOnjAJ2C0Wvm3QhzQgjAXgDrSkr8DwTiKji_pOv4neIuxK7Al83QmzJbN5s7MdQtbIcllXrcwSErIC0ltNrli_cYOwvuDBKu6gzFu4fOM1&amp;t=637513926500000000" type="text/css" rel="stylesheet"><style type="text/css">
+	.ig_832b3c85_r1{width:140px;}</style></head>
+<body marginwidth="0" marginheight="0">
+
+    <div>
+    <form name="Form1" method="post" action="frwDataFLTFiltro.aspx?ENT=7665655ECFC1DAED&amp;MAC=9B52DB98044D3AF8&amp;ENTOP=1E861BAF83205D26&amp;Key=C5BF1883C602636EC2062811953E1D542043847C5B104078&amp;Caption=ACC1FB4F30F06CBBB598648AB04425E5&amp;Nivel=7916838B386D28DB&amp;NodeID=D634E66D012ABA163712243CAA8E5E436E17F4DCBAD86335" id="Form1" autocomplete="off">
+<div>
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTMzODU5MzUwDxYGHgdFc1JhbmdvaB4KRXN0YU5lZ2Fkb2geCFRwQWNjaW9uCyl7RXNjb05FVDIuTWFzdGVyQ2xhc3Nlcy5BY2Npb24rVHBBY2Npb25lcywgRXNjb05FVDIuTWFzdGVyQ2xhc3NlcywgVmVyc2lvbj0yLjUuNS4zMTI4MCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxs/////w8WAgIDDxYCHgxhdXRvY29tcGxldGUFA29mZhYkAgUPEA8WBh4HQ2hlY2tlZGceB1Rvb2xUaXAFEURlc2FjdGl2YXIgRmlsdHJvHgdWaXNpYmxlaGRkZGQCFw8PFhgeDENvZFRwQWN0aXZlWAJNHgpNb2RvRmlsdHJvZx4HQ2FwdGlvbmUfBmceBkxvY2tlZGgeBF8hU0ICgAIeJFNjcmlwdE9DYWxsYmFja0Z1bmN0aW9uT25DaGFuZ2VuQmx1cmUeEFNjcmlwdE9uS2V5UHJlc3MFWGlmICh3aW5kb3cucHJlc3NLZXkpIHtpZiAoZXZlbnQua2V5Q29kZSA9PSAyNykge2lmICghcHJlc3NLZXkoKSl7aWdfY2FuY2VsRXZlbnQoKTt9IH07fTseBVdpZHRoGwAAAAAAcHJAAQAAAB4MU2NyaXB0T25CbHVyZR4FQ29kSW4FEEBAQW51bGFkbz09RmFsc2UeDlNjcmlwdE9uQ2hhbmdlZRYCHgVzdHlsZQURTEVGVDowcHg7VE9QOjBweDsWAmYPDxYCHgFFZWRkAhkPDxYUHwdmHwhnHwllHwZoHwpoHwxlHw0FWGlmICh3aW5kb3cucHJlc3NLZXkpIHtpZiAoZXZlbnQua2V5Q29kZSA9PSAyNykge2lmICghcHJlc3NLZXkoKSl7aWdfY2FuY2VsRXZlbnQoKTt9IH07fTsfD2UfEGUfEWVkFgJmDw8WAh8TZWRkAhsPDxYEHxNlHwZoZGQCHQ8PFgQfE2UfBmhkZAIfDxAPFgIfBmhkZGRkAiEPEA8WAh8GaGRkZGQCIw8PFgIfBmhkZAIlDw8WAh8GaGRkAicPDxYCHwZoZGQCKQ8PFgIfBmhkZAIrDw8WAh8GaGRkAi0PDxYCHwZoZGQCLw8PFg4eElVzZUJhY2tncm91bmRJbWFnZWgeDEF1dG9Qb3N0QmFja2geDkltYWdlQWxpZ25tZW50CymHAUVzY29ORVQyLlVJLkNvbnRyb2xzLldlYi5CYXNlQnV0dG9uK0ltYWdlQWxpZ25tZW50LCBFc2NvTkVUMi5VSS5Db250cm9scy5XZWIsIFZlcnNpb249Mi41LjUuMzEyODEsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAIeDURlZmF1bHRCdXR0b24LKYUBRXNjb05FVDIuVUkuQ29udHJvbHMuV2ViLndlYkJ1dHRvbitEZWZhdWx0QnV0dG9uLCBFc2NvTkVUMi5VSS5Db250cm9scy5XZWIsIFZlcnNpb249Mi41LjUuMzEyODEsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbP////8PHhJGb3JlQ29sb3JNb3VzZU92ZXIKGx4NQm9yZGVyUGFkZGluZxsAAAAAAAAUQAEAAAAeEkJhY2tDb2xvck1vdXNlT3Zlcgp6ZGQCMQ8PFg4fFGgfFWgfFgsrBQIfFwsrBv////8PHxgKGx8ZGwAAAAAAABRAAQAAAB8aCnpkZAIzDw8WEB8UaB8VZx8WCysFAh8XCysG/////w8fGAobHxkbAAAAAAAAFEABAAAAHwUFHEluZ3Jlc2FyIHVuIHJhbmdvIGRlIHZhbG9yZXMfGgp6ZGQCNQ8PFhIfFGgfFWcfFgsrBQIfFwsrBv////8PHgdFbmFibGVkaB8YChsfGRsAAAAAAAAUQAEAAAAfBQUYTmVnYXIgZWwgZmlsdHJvIGFwbGljYWRvHxoKemRkAjcPDxYSHxRoHxVnHxYLKwUCHxcLKwb/////Dx8baB8YChsfGRsAAAAAAAAUQAEAAAAfBQUZTmVnYXIgZWwgZ3J1cG8gZGUgZmlsdHJvcx8aCnpkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQULY2JvRGVzZGV0cHBjrKR1dExRqt4enErsHmFFh45A1w==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=LQgy2mqnQk-bCuv9Fou-sPAO4dVPQn9u3UePAB9-AV2ywLNtIZM8OnxYlRTUsNialaqe9Kjn889fJVCZTDNObq2TGHU1&amp;t=636316698606689430" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=78164wc2xXs7FX88DAE0PlvzIDutqEOEsTlYYdRTh3t9OmEMAjXN8gXCrqYFLQmhybBhIKkPxt884gAj0ZdRXsZFLEZztOoDyDlJE0zD0Go1rEs_j8gkVqbPu5dibDsBYun3A2qmiHaJFBiMFDTl7pdUEpo1&amp;t=ffffffffe7a101bc" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=o5GoR4BO-GpjFwO-vua_lG7E4LLptqRzY88WPW4UfPSGH4Xqa6zo6PnPXoKscAggSh8D-wpCLbydeTlxTk_BRr9SKQLNHPtfl1s93m8K52WNI-NTBz1KnkYVYaI1peU_x_08qYBuFCatwmk608oB-ugUnSA1&amp;t=ffffffffe7a101bc" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=QX0WIF1l-tYYfaiwNOHiv_1Caz6zYuNy-2zFpI--ZoTELdlJq7ILFSaSprLBFsfh9wfhYg1zX0m-NCEzx_7JGRsUiKmg0Qudv_1Ou1GFTsm8d2B9MqUdlbt4KMzwXW9EbvZLPUlwLrWSCfUIEWvUwQfv7LXpykx7u2uu8f0MEa8cyObS0&amp;t=ffffffffe7a101bc" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=t2GGCB1WiPyq-sfszcre0mo4Vjy9qO3VyUdGtZIshqaYETpcFrs4rVxVbYgp8dKz0lDPbvSqIWCEV_sDVNxX6CjBmYnyLsPyp4ACd1OxumBAm9Z8nSVgvggseFqG1HLgz9eQb1q39FSdlX3oPfBM71rvKzU1&amp;t=ffffffffe7a101bc" type="text/javascript"></script>
+<script src="Scripts/scr_GeneralScripts.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var MS_STARTUP='9B52DB98044D3AF8';var MS_LOGOFF='23CA6C629251F1C0';var MS_CONFIGMENU='4CB238A0F78728F0664DBB2F7BC5F786';var MS_OPENGRID='6C3F119177F5A063687B5CF7B88EC8FC';var MS_EXECACT='3A6432438EEF850B';var MS_EXECACTWIZARD='393696431E026A4A0924EA5867FD9561';var MS_DELGRIDCONFIG='22D8F764B51C8786400D646CA8F9F3BB';var MS_OPENFILTERWND='22FB493962E778EF17B7D222014090F4';var MS_OPENFILTERWNDFROMDSKTP='22FB493962E778EFB10B0A44F3E5FCC6DD08F20608A21DBE';var MS_MENUCONTEXT='C1F27C08528E16F59778AC425F9C23D7';var QS_ENTIDAD='ENT';var QS_TPACCION='TPA';var QS_FORMID='FID';var QS_KEYS='KEY';var QS_MAINACTION='MAC';var QS_COMBO='CBO';var QS_MODO='MOD';var QS_ENTOP='ENTOP';var QS_CLAVES_AUXILIARES='AUX';var QSC_KEYVALUEPAIRSEP='=';var QSC_MEMBERSEP='&';var QSC_INITIATOR='?';var TPA_Agr='32128566D175829E';var TPA_Mod='67C5337888DADCA7';var TPA_Det='7916838B386D28DB';var TPA_Anu='57E84747B49F7124';var TPA_Rec='8B6A6219E2F4ABA1';var TPA_Imp='AFC044AC1F0DB555';var TPA_Exp='6E6E19D07C04C921';var TPA_Frm='F15FE728DE899F9E';var TPA_Aut='7342220C8A6E4993';var TPA_Rch='BA598796D063A0BE';var MOD_Nor='32128566D175829E';var MOD_Tab='67C5337888DADCA7';var MESS_ENT='B04EC75207E21DA4';var MESS_Width='380';var MESS_Height='125';//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=bszlilDqTDZ8pZahmZ4t5HNHGUBUlqM-aqU74LvHw64cjq5e-PWMxSrYwsClBhGTXabvrhSM50aSIvnnd5MusKYmvT7kws_pRSKZsVVn6fX_hNhFRsACuke4-ixmxElxWQBukRIc3ty8ZQvfKFucAYjHcVE1&amp;t=ffffffffe7a101bc" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=WHK0zqyXZL2_sV5tsLy2EDQtB3pvMoWcntPKKjsyTxHFhBzRbCist79nomNQQQvdSk2gzhr_10vJD2Eu0XpgzJhIuWL8sPkO3pSa8fPydi00YaR1XNDpprP7ACNBVPSrDecMsPihe-HLubIn88b53U37yhk1&amp;t=ffffffffe7a101bc" type="text/javascript"></script>
+<script src="/WebResource.axd?d=XbrDhzoySZhTilNiL3EHJPLS11cima1UIL6cmbRVcg9o5fV37vIVuLfJz4bFgj1qyEzN_jGC8-5erCfSQ0hUxUKPW9WIwcqU0NgKe2xQYsy0VvvxC9Y6lf2LB9eSEaOOqcVs7f8aMeNKlTEkiciSPfFbIas1&amp;t=637527208480000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=QgufyYrww2QLgNRNUpglNnUPZA0o2HM4ZtqwKTi58JbG16J6F2sXrKYKlbTu6W4jwHV8ClBSVQfrO_zJfpyt4egWJQc53f4Ha1GmeUrfxJFNyqTTaQZaJXgdPpgQ3DbPMt6rGXAYlG8cnjBJpTgkO18yMCg1&amp;t=ffffffffe7a101bc" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function Refrescar(pRefrescar) {
+  if(pRefrescar==true){ window.location=window.location.href; }
+  if (window.opener!=undefined&&typeof window.opener!='undefined') {
+    if (typeof window.opener.Refrescar=='object'||typeof window.opener.Refrescar=='function') {
+      if (window.opener.Refrescar ) { window.opener.Refrescar(true); }
+    }
+  }
+}
+$( document ).ready( function(){$.blockUI.defaults.css.padding=0;$.blockUI.defaults.css.margin=0;$.blockUI.defaults.css.top='5%';$.blockUI.defaults.css.width='90%';$.blockUI.defaults.css.height='90%';$.blockUI.defaults.css.left='5%';$.blockUI.defaults.css.textAlign='center';$.blockUI.defaults.css.cursor='pointer';$.blockUI.defaults.css.color='#000';$.blockUI.defaults.css.border='0px solid #000';$.blockUI.defaults.css.backgroundColor='';$.blockUI.defaults.themedCSS.width='90%';$.blockUI.defaults.themedCSS.height='90%';$.blockUI.defaults.themedCSS.top='5%';$.blockUI.defaults.themedCSS.left='5%';$.blockUI.defaults.overlayCSS.backgroundColor='#ebebeb';$.blockUI.defaults.overlayCSS.opacity=0.85;$.blockUI.defaults.overlayCSS.cursor='default';$.blockUI.defaults.growlCSS.width='350px';$.blockUI.defaults.growlCSS.top='10px';$.blockUI.defaults.growlCSS.left='10px';$.blockUI.defaults.growlCSS.right='10px';$.blockUI.defaults.growlCSS.border='none';$.blockUI.defaults.growlCSS.padding='5px';$.blockUI.defaults.growlCSS.opacity=0.85;$.blockUI.defaults.growlCSS.cursor='default';$.blockUI.defaults.growlCSS.color='#fff';$.blockUI.defaults.growlCSS.backgroundColor='#000';} );//]]>
+</script>
+<table id="tblComboGlobal" onmouseover="CancelAutoCloseCombo();" onmouseout="SetAutoCloseCombo();" class="ec_ComboEditor_Button_Menu" style="top: 62px; left: 0px; height: 144px; z-index: 5000; width: 275px;">
+	<tbody><tr style="vertical-align:top;">
+		<td colspan="3"><div id="divComboGlobal" style="overflow:auto;height:128px;width:295px;"><table class="ec_ComboEditor_Grid" cellspacing="0" rules="all" border="1" id="cboDesdegrd" style="width:93%;border-collapse:collapse;">
+	<tbody><tr id="cboDesdegrd_Header" class="ec_ComboEditor_Grid_Header">
+		<td style="height:15px;width:0px;display:none;">Código de comitente</td><td style="height:15px;width:50%;">Denominación</td><td style="height:15px;width:50%;">Nª Comitente</td><td style="height:15px;width:0px;display:none;">Código de mercado</td><td style="height:15px;width:0px;display:none;">Código de institución.</td><td style="height:15px;width:0px;display:none;">Está Anulado</td><td style="height:15px;width:0px;display:none;">Es Cartera Propia</td><td style="height:15px;width:0px;display:none;">Es Cartera Propia</td><td style="height:15px;width:0px;display:none;">COMBO_ETS_CODTPCOMITENTE</td><td style="height:15px;width:0%;">Nª Cuenta</td>
+	</tr><tr class="ec_ComboEditor_Grid_Footer">
+		<td style="display:none;">CodComitente</td><td>Denominación</td><td>Número Comitente</td><td style="display:none;">CodMercado</td><td style="display:none;">CodInstitucion</td><td style="display:none;">Anulado</td><td style="display:none;">EsCarteraPropia</td><td style="display:none;">CodCuentaRelacionada</td><td style="display:none;">CodTpComitente</td><td>NumComitente</td>
+	</tr>
+</tbody></table><span id="divComboPrgBar" class="ec_ComboEditor_ProgressBar" style="display:none;background-position:center bottom;background-repeat:no-repeat;background-image:url(/WebResource.axd?d=MqNu649yIxdpovLUzm5FsjkdDTfjwk0dtkG9VR7cV6P0PJwzYa-3AOMmHZ9J8DmvdGh4bmHqYnXKfpT4dhimZYH1UGbjq5KsrYIwYdafIxpzjocB7JpgEzgnildj0XRfiWZoMhGNN5Id44QEubbOvLNehKc1&amp;t=637513926500000000););">Aguarde un instante por favor...</span><script type="text/javascript"><![CDATA[ HIDEBUTTONS = 'cboGridButtonMoreRows'; ]]></script></div></td>
+	</tr><tr height="26" class="ec_ComboEditor_Button_Background">
+		<td><table align="center" id="cboGridButtonMoreRows" title="Traer más datos." class="ec_ComboEditor" cellspacing="0" cellpadding="0" onclick="MoreRowsCbo(); return false;;__doPostBack('cboGridButtonMoreRows','')" onmouseover="javascript:ComboSetClass(this,'ec_ComboEditor_Over'); this.style.cursor='hand'" onmouseout="javascript:ComboSetClass(this,'ec_ComboEditor');" style="cursor: pointer; display: none;">
+			<tbody><tr>
+				<td><input type="image" src="/WebResource.axd?d=KpfDuZPIan4mIEt13mwpaFEROf3nDbstljbWUWOOGt4R7NwHc4IjkkBFyRa2odjocU2_KLKXVKoRC6KS0iyYaQQwCeG0k6sQogpDIDOwntvvlWKrN6mPsCWLbq3oG20LpVtTiv73a5-P-zn0nzW5gOoPGDM1&amp;t=637513926500000000" style="border-width:0px;"></td><td nowrap="">Más datos...</td>
+			</tr>
+		</tbody></table></td><td><table align="center" title="Dejar la selección vacía." class="ec_ComboEditor" id="" cellspacing="0" cellpadding="0" onclick="ComboSelectNone(); return false;;__doPostBack('','')" onmouseover="javascript:ComboSetClass(this,'ec_ComboEditor_Over'); this.style.cursor='hand'" onmouseout="javascript:ComboSetClass(this,'ec_ComboEditor');" style="cursor:pointer;">
+			<tbody><tr>
+				<td><input type="image" src="/WebResource.axd?d=MtpNMye13MbxDOvzs5zStZAh8OaIt54GWjkRS6wp3bANrXewEQ-dciwycxZbKqY8e-9OB7rBj21YDRcCO00JTuGyUUXNHAHA-Rt2ft00ij_MqaFQkhTD3amtW_5eQk82OjCTPjTpx0CHf1KA8r0DPXWWraM1&amp;t=637513926500000000" style="border-width:0px;"></td><td nowrap="">Borrar selección.</td>
+			</tr>
+		</tbody></table></td><td><table align="center" title="Cancelar el cambio dejando la selección anterior" class="ec_ComboEditor" id="" cellspacing="0" cellpadding="0" onclick="CloseCombo(''); return false;;__doPostBack('','')" onmouseover="javascript:ComboSetClass(this,'ec_ComboEditor_Over'); this.style.cursor='hand'" onmouseout="javascript:ComboSetClass(this,'ec_ComboEditor');" style="cursor:pointer;">
+			<tbody><tr>
+				<td><input type="image" src="/WebResource.axd?d=vGz2vzgs51lJG5m7Ih6829X_B6giWpkP1VhjKoj0oJhmRZz3-7UxjrcocB0YAEhuNXsyemK6tHP4449QPWlNt7Qg8k02e22rh2wE6sjQ31A2p4zTorYk5Q6l40dQzZAxHfbIsareO_TVhoCbEzjKElm-wyA1&amp;t=637513926500000000" style="border-width:0px;"></td><td nowrap="">Cancelar</td>
+			</tr>
+		</tbody></table></td>
+	</tr>
+</tbody></table>
+<script type="text/javascript">
+//<![CDATA[
+var pRowsToAdd = 8;
+
+var pSearchDelay = 500;
+var pDropDownOffset = 20;
+var DropDownContainer = 'tblComboGlobal';
+
+var GridContainer = 'divComboGlobal';
+var GridProgressBar = 'divComboPrgBar';
+var TblSearch_Prefix = 'tsr';
+var TblDisplay_Prefix = 'tdr';
+var CodOut_Prefix = 'tco';
+var ButtonOpen_Prefix = 'but';
+var Combo_Prefix = 'tpp';
+var ParameterSeparator = '#$%#';
+var NonCodOut_Prefix = 'tcn';
+var CodIn_Prefix = 'tci';
+var CodPK_Prefix = 'tpk';
+var Grid_Prefix = 'grd';
+var State_Prefix = 'tst';
+var ServerID_Prefix = 'tid';
+var Text_Prefix = 'tpp';
+var BotonCboHeight = '26';
+var CurrentComboID = 'cboDesdeCurrentCombo';
+var TextIG_Prefix = 'igtxt';
+var OpenComboGif = '/WebResource.axd?d=v-bh0ou_6ZNjXTDf6Q3lnmmjdP_G5P9fJDDcwz4R2CXnv7b20kVCKWwQ1OI1gMFZPUFSHB-4YBHH3KrwIhGIDjBdQAUkYkedy37n1y3DLna4VMIdP0k3vEfNMHhl-jsjzxIqm5EstVvyTsn0EOJSLNJDvto1&t=637513926500000000';
+var OpenComboDisabledGif = '/WebResource.axd?d=kGAMPXMpX3uW1uVlz7OEoxCSqui2mvTgsyUXuadutywJCb-HispZ5Dre37stH_Rkaw0Xrm9WpVzwonEoBLg4a4lW2RiEQ7U_zOi_Gjr6J_vW67nZ7XC0is9QqF9xe7JV8SjZdpGxGLZ4SGt8kvieJ66JKWfK4fkDebZF-gkHi8Kr0YZ70&t=637513926500000000';
+var pComboDisplayStyle = 'inline';
+function CallServerCbo(arg, context) {
+context = getIDFromClientID(context); 
+WebForm_DoCallback(context,arg,CallBackResGrid,context,CallBackErrorCbo,true);}
+function CallServerSel1(arg, context) {
+context = getIDFromClientID(context); 
+WebForm_DoCallback(context,arg,CallBackResSel1,context,CallBackErrorCbo,true);}
+function CallServerDiv(arg, context) {
+context = getIDFromClientID(context); 
+WebForm_DoCallback(context,arg,CallBackResDiv,context,CallBackErrorCbo,true);}
+function CallServerHead(arg, context) {
+context = getIDFromClientID(context); 
+WebForm_DoCallback(context,arg,ComboHeaderClickCallBack,context,CallBackErrorCbo,true);}
+function CallServerHeadCboChange(arg, context) {
+context = getIDFromClientID(context); 
+WebForm_DoCallback(context,arg,CallBackResHeadCboChange,context,CallBackErrorCbo,true);}
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=TZ74vfkO56bg6K48Oq0Uy-p8NC7W_DTjVVp3hvjpEu-x54j6nQCuafDGIDjpJwPTbTG_hzvLqVqaBknQoXYsdki7vsyQgDekVjzCFz3_zq8PZYrkEujvZjilsMk0F2sRwBqSs-Y9slLlxcQTShdChXdp2Nc1&amp;t=ffffffffe7a101bc" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+var ig_pi_imageUrl='/WebResource.axd?d=vQ686CSv6SUjQtXm1OlnkEFJlsSi9aqfmAsV7J3_dw4Mr74-aU9-q8T-nPxhoBasfALDZkiSgme6yiThLhS7ii3M5EEr4BTiB03fCOuxsGoQXk-wQ_TsFVtwe2oUxUSI_hd0T6H496qC6qqV45BzJWi6uwiOdWSMXzgqtEr-znghOqXN0&t=633952407660000000';try{(new Image()).src=ig_pi_imageUrl;}catch(ex){}
+//]]>
+</script>
+<script src="/ScriptResource.axd?d=RbUJRBJajTY0_IwgqAp56DIgOrNtvHi4J5bKRdzzOL_I7TjokytSMdID6dCJE6nF4fhb-F8iRLZkitQ1Wb5sWDP3VXt35EDSMzHjQP1NF9syaTlMVOqX7kpcEHJYQ6ugNOjX9oyzdgz9POcCgItwNcL70PmN0HavTBEembV5cQpKzAYt0&amp;t=39d38060" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=_y758uXPATeI9FIYYntD_RO6Z9y_7Q-atM3h7CjtVwggBlea2PEcWzJjsf4sJmT7SEu5MGZw3ceit9-uDw8Ij_lzx-5t0tN7fmdUOZcTHPUfpWbyjhm_PPXcEkVDzEvTTOyGUaCo6hkmN3Yn7c3MXLooyk2w_enGU-omw50OcN80W-GG0&amp;t=12897201" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = '{"name":"es-AR","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":false,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"$","NaNSymbol":"NeuN","CurrencyNegativePattern":2,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-Infinito","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":2,"PositiveInfinitySymbol":"Infinito","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"a.m.","Calendar":{"MinSupportedDateTime":"\/Date(-62135586000000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":false},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"dddd, dd\u0027 de \u0027MMMM\u0027 de \u0027yyyy hh:mm:ss tt","LongDatePattern":"dddd, dd\u0027 de \u0027MMMM\u0027 de \u0027yyyy","LongTimePattern":"hh:mm:ss tt","MonthDayPattern":"dd MMMM","PMDesignator":"p.m.","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"hh:mm tt","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM\u0027 de \u0027yyyy","AbbreviatedDayNames":["dom","lun","mar","mié","jue","vie","sáb"],"ShortestDayNames":["do","lu","ma","mi","ju","vi","sá"],"DayNames":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],"AbbreviatedMonthNames":["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic",""],"MonthNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""],"IsReadOnly":false,"NativeCalendarName":"calendario gregoriano","AbbreviatedMonthGenitiveNames":["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic",""],"MonthGenitiveNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""]}}';//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=Oj2Z5RbJ-nU3ZsYDGEMj4HmtBtlfBwfDtS3_OJIUblK6mcwfr-2SEJmeEcA_4uYM0vSK-Bx04kzuOE1r4D6Xr7gheOOdljs6H35-h_hOcBTWslLuKvMJAuzGbMhxakRTnVv8_mAn2ATs_rCO7JY8PxjRhz01&amp;t=ffffffffbcb9b94a" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=CGyw96Q9xwLgYD8qB1RZ5zKUvaba18meLzGLzhDz9erysl_a57LiySXbzV4t1ncTm9Pu6VWt1SgYhE86lQcWdH_CrBGoiVkFkcCm-43e2csUMlz1WIURh1Fl9rLHexRMS2dZ8w2" type="text/javascript"></script>
+<script src="/WebResource.axd?d=iVE8yufnJ-iVQ4sKlvp4GZHp98O7FkJDEiUAyyksr3s4TgiQmzPYGOSAYtjL2nrYbCsjPo3EgX8ZVESggTRUJ3xE2Og1&amp;t=636316698606689430" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWEQKCt9miBAKoqdfYBwLqme2aAQLblY/KCQKL+pf3DQLowJCnCgLWud2JCAKb8vHjCgLrjem2BgK0nKeHBgKnz5fGAQLWk4KHAwL9n/zNCQK7quTxCALdoZfxBQKEibKzAwLxjbWVDxPdfqZ0qBJlX9OxQuf95BjbCcfX">
+</div>
+
+    
+        
+    <table id="fraHeaderFiltro" tabindex="-1" cellspacing="0" cellpadding="0" border="0" style="display:inline-block;height:16px;width:304px;width:100%;position: static">
+	<tbody><tr>
+		<td style="width:100%;BORDER-BOTTOM:#CEDAF4 3px solid; ;"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;width:100%;">
+			<tbody><tr>
+				<td><a name="LA0" id="LA0">&nbsp;</a></td><td height="28px" style="width:100%;font-weight:bold;color:#336699;padding-left:5px;">Cuenta - Denominación</td><td style="padding-right:5px;width:1px;"></td>
+			</tr>
+		</tbody></table></td>
+	</tr><tr style="padding-top:10px;">
+		<td></td>
+	</tr>
+</tbody></table>
+        
+    
+    <br>
+
+    <div id="divFiltros" style="margin-top: 10px; left: 0px; width: 316px; position: absolute;
+        top: 32px; height: 104px" class="et_DataFLT_Editores">
+    
+        <input name="txtFila" type="hidden" id="txtFila" style="left: 160px; position: absolute; top: 472px">
+        <input name="txtCaption" type="hidden" id="txtCaption" style="left: 160px; position: absolute; top: 472px">
+        <input name="txtvalDesde" type="hidden" id="txtvalDesde" style="left: 160px; position: absolute; top: 472px">
+        <input name="txtvalHasta" type="hidden" id="txtvalHasta" style="left: 160px; position: absolute; top: 472px">
+        <input name="txtvalClaves" type="hidden" id="txtvalClaves" style="left: 160px; position: absolute; top: 472px">
+        <input name="txtFromFunction" type="hidden" id="txtFromFunction" style="left: 160px; position: absolute; top: 472px">
+        <input name="EsFechaProcesoDesde" type="hidden" id="EsFechaProcesoDesde" style="left: 160px; position: absolute; top: 472px">
+        <input name="EsFechaProcesoHasta" type="hidden" id="EsFechaProcesoHasta" style="left: 160px; position: absolute; top: 472px">
+
+        <table id="cboDesdetsr" tabindex="-1" class="et_combo_table" onkeypress="submitonenter('Form1',event,this)" onmouseover="CancelAutoCloseCombo();" onmouseout="SetAutoCloseCombo();" style="display:inline-block;height:21px;width:295px;display:inline-block;LEFT:0px;TOP:0px;">
+	<tbody><tr>
+		<td class="input" style="width:253px;padding:0 0 0 1px;"><input type="hidden" name="cboDesdetpp" id="cboDesdetpp" value="351004456"><input type="hidden" name="cboDesdetpp_p" id="cboDesdetpp_p" value="351004456"><input type="text" style="margin:0 0 0 -1px;border:none;width:255px;height:15px;" class=" input" id="igtxtcboDesdetpp" editid="cboDesdetpp"></td><td style="width:16px;"><input type="image" name="cboDesdebut" id="cboDesdebut" class="et_cursor_pointer" src="/WebResource.axd?d=v-bh0ou_6ZNjXTDf6Q3lnmmjdP_G5P9fJDDcwz4R2CXnv7b20kVCKWwQ1OI1gMFZPUFSHB-4YBHH3KrwIhGIDjBdQAUkYkedy37n1y3DLna4VMIdP0k3vEfNMHhl-jsjzxIqm5EstVvyTsn0EOJSLNJDvto1&amp;t=637513926500000000" onclick="ShowRecords('cboDesde','295px','150px',event);return false;" style="border-width: 0px; cursor: pointer;"></td>
+	</tr>
+</tbody></table><table id="cboDesdetdr" tabindex="-1" class="et_combo_table" onkeypress="submitonenter('Form1',event,this)" onmouseover="CancelAutoCloseCombo();" onmouseout="SetAutoCloseCombo();" style="display:inline-block;height:21px;width:295px;display:none;LEFT:0px;TOP:0px;">
+	<tbody><tr class="et_cursor_pointer" onmouseover="this.style.color='#00f';" onmouseout="this.style.color='#000';">
+		<td title="Denominación: " onclick="ComboHeaderClick('cboDesde');" class="et_cursor_pointer input " style="width:50%;;"></td><td title="Número Comitente: " onclick="ComboHeaderClick('cboDesde');" class="et_cursor_pointer input " style="width:50%;;"></td><td title="NumComitente: " onclick="ComboHeaderClick('cboDesde');" class="et_cursor_pointer input " style="width:0%;;"></td><td style="width:16px;"><input type="image" name="cboDesdebut" id="cboDesdebut" class="et_cursor_pointer" src="/WebResource.axd?d=v-bh0ou_6ZNjXTDf6Q3lnmmjdP_G5P9fJDDcwz4R2CXnv7b20kVCKWwQ1OI1gMFZPUFSHB-4YBHH3KrwIhGIDjBdQAUkYkedy37n1y3DLna4VMIdP0k3vEfNMHhl-jsjzxIqm5EstVvyTsn0EOJSLNJDvto1&amp;t=637513926500000000" onclick="ShowRecords('cboDesde','295px','150px',event);return false;" style="border-width: 0px; cursor: pointer;"></td>
+	</tr>
+</tbody></table><input type="hidden" name="cboDesdetid" id="cboDesdetid" value="cboDesde"><input type="hidden" name="cboDesdetpk" id="cboDesdetpk"><input name="cboDesdetcn" type="text" id="cboDesdetcn" style="display:none;"><input type="hidden" name="cboDesdeCurrentCombo" id="cboDesdeCurrentCombo" value="cboDesde"><input name="cboDesdetco" type="hidden" id="cboDesdetco" onchange="if (this.value != null) {}; if (this.value == '') {};"><input name="cboDesdetci" type="hidden" id="cboDesdetci" onchange="SelectNoneWithComboID('cboDesde');"><input type="hidden" name="cboDesdetst" id="cboDesdetst" value="16@@1">
+                
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+        
+        <table id="cmdAgregar" align="center" cellspacing="0" cellpadding="0" style="display:inline-block;color:#336699;font-family:Tahoma;font-size:11px;height:8px;width:16px;height:8px;width:16px;left: 0px; position: absolute; top: 40px">
+	<tbody><tr>
+		<td valign="middle" align="center" colspan="1" onclick="javascript:var but=document.getElementById('cellimgcmdAgregarKey');if (but.disabled) {if (but.disabled==false) {AddModif(-1);}}else {AddModif(-1);}" onmouseover="javascript:if (typeof(wb_over) == 'function') wb_over(this.id);" onmouseout="javascript:if (typeof(wb_out) == 'function') wb_out(this.id);" id="cellimgcmdAgregarKey" style="padding-top:5px;padding-bottom:5px;padding-left:5px;padding-right:5px;"><img name="imgcmdAgregarKey" width="12px" height="12px" src="App_Themes/ETSNew/Pages/Images/Agregar.png" border="0" style="height:17px;width:17px;"></td>
+	</tr>
+</tbody></table>
+        <table id="cmdEliminar" align="center" cellspacing="0" cellpadding="0" style="display:inline-block;color:#336699;font-family:Tahoma;font-size:11px;height:8px;width:8px;height:8px;width:8px;left: 32px; position: absolute; top: 40px">
+	<tbody><tr>
+		<td valign="middle" align="center" colspan="1" onclick="javascript:var but=document.getElementById('cellimgcmdEliminarKey');if (but.disabled) {if (but.disabled==false) {DeleteAll();;}}else {DeleteAll();;}" onmouseover="javascript:if (typeof(wb_over) == 'function') wb_over(this.id);" onmouseout="javascript:if (typeof(wb_out) == 'function') wb_out(this.id);" id="cellimgcmdEliminarKey" style="padding-top:5px;padding-bottom:5px;padding-left:5px;padding-right:5px;"><img name="imgcmdEliminarKey" width="12px" height="12px" src="App_Themes/ETSNew/Pages/Images/eliminar.png" border="0" style="height:17px;width:17px;"></td>
+	</tr>
+</tbody></table>
+        <table id="cmdRango" title="Ingresar un rango de valores" align="center" cellspacing="0" cellpadding="0" style="display:inline-block;color:#336699;font-family:Tahoma;font-size:11px;height:8px;width:8px;height:8px;width:8px;left: 64px; position: absolute; top: 40px">
+	<tbody><tr>
+		<td valign="middle" align="center" colspan="1" onclick="javascript:var but=document.getElementById('cellimgcmdRangoKey');if (but.disabled) {if (but.disabled==false) {;__doPostBack('cmdRango','Key');}}else {;__doPostBack('cmdRango','Key');}" onmouseover="javascript:if (typeof(wb_over) == 'function') wb_over(this.id);" onmouseout="javascript:if (typeof(wb_out) == 'function') wb_out(this.id);" id="cellimgcmdRangoKey" style="padding-top:5px;padding-bottom:5px;padding-left:5px;padding-right:5px;"><img name="imgcmdRangoKey" width="12px" height="12px" src="App_Themes/ETSNew/Pages/Images/f_crango.png" border="0" style="height:17px;width:17px;"></td>
+	</tr>
+</tbody></table>
+        <table id="cmdNegar" disabled="disabled" title="Negar el filtro aplicado" align="center" cellspacing="0" cellpadding="0" style="display:inline-block;color:#336699;font-family:Tahoma;font-size:11px;height:8px;width:8px;height:8px;width:8px;left: 96px; position: absolute; top: 40px">
+	<tbody><tr>
+		<td valign="middle" align="center" colspan="1" style="padding-top:5px;padding-bottom:5px;padding-left:5px;padding-right:5px;"><img name="imgcmdNegarKey" src="App_Themes/ETSNew/Pages/Images/f_cnegac_disabled.png" border="0" style="height:17px;width:19px;"></td>
+	</tr>
+</tbody></table>
+        <table id="cmdNegarGrupo" disabled="disabled" title="Negar el grupo de filtros" align="center" cellspacing="0" cellpadding="0" style="display:inline-block;color:#336699;font-family:Tahoma;font-size:11px;height:8px;width:8px;height:8px;width:8px;left: 128px; position: absolute; top: 40px">
+	<tbody><tr>
+		<td valign="middle" align="center" colspan="1" style="padding-top:5px;padding-bottom:5px;padding-left:5px;padding-right:5px;"><img name="imgcmdNegarGrupoKey" src="App_Themes/ETSNew/Pages/Images/f_cgrpne_disabled.png" border="0" style="height:17px;width:19px;"></td>
+	</tr>
+</tbody></table>
+        <div id="valSummary" style="color:Red;width:264px;left:0px;position:absolute;top:72px;display:none;">
+
+</div>
+    </div>
+
+    &nbsp;
+    <input type="hidden" name="_IG_CSS_LINKS_" id="_IG_CSS_LINKS_" value="styles/style.css|~/app_themes/etsnew/controls/accordion/ec_accordion.css|~/app_themes/etsnew/controls/comboeditor/ec_comboeditor.css|~/app_themes/etsnew/controls/dateeditor/ec_dateeditor.css|~/app_themes/etsnew/controls/horaeditor/ec_spinhoraeditor.css|~/app_themes/etsnew/controls/layoutcontroller/ec_columna.css|~/app_themes/etsnew/controls/layoutcontroller/ec_controls.css|~/app_themes/etsnew/controls/layoutcontroller/ec_layoutcontroller.css|~/app_themes/etsnew/controls/layoutcontroller/et_blockui.css|~/app_themes/etsnew/controls/numericeditor/ec_numericeditor.css|~/app_themes/etsnew/controls/numericeditor/ec_spinnumericeditor.css|~/app_themes/etsnew/controls/ultrawebmenu/et_ultrawebmenu.css|~/app_themes/etsnew/controls/ultrawebtab/ig_tab.css|~/app_themes/etsnew/controls/webimagebutton/ig_webimagebutton.css|~/app_themes/etsnew/controls/webusercontrols/ec_webusercontrols.css|~/app_themes/etsnew/et_common.css|~/app_themes/etsnew/pages/et_datafmt.css|~/app_themes/etsnew/pages/et_gridrow.css|/webresource.axd?d=nheqb3y5dvl8gsfuoocbr0ymritbv0prw10zq5ndcjwxd5czutwonjaj2c0wvm3qhzqgjaxgdrskr8dwtikji_pov4neiuxk7al83qmzjbn5s7mdqtbicllxrcwseric0ltnrli_cyowvudbku6gzfu4fom1&amp;t=637513926500000000|app_themes/infragistics/default/ig_textedit.css|app_themes/infragistics/default/ig_shared.css">
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("valSummary"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var valSummary = document.all ? document.all["valSummary"] : document.getElementById("valSummary");
+valSummary.displaymode = "List";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {
+    $("input[type='text']:visible:enabled:first", document.forms[0]).focus();
+    $('ul.controlContainer li:even').addClass('even');
+});
+//]]>
+</script>
+<script language="javascript">
+function AddModif(Add) {
+if (!(typeof(Page_ClientValidate) != 'function' || Page_ClientValidate())) {return;}
+var par=window.parent.document;
+var CreateCells=0; var j=0;
+var cells = new Array(7);
+var key = '';
+if(document.getElementById('igtxtcboDesdetpp').value=='') {alert('Debe especificar un valor para el filtro'); return 0;};
+if (Add==-1) {
+    var row=par.createElement("TR");
+    var ind=par.getElementById("Layer2_txtIndex");
+    CreateCells=-1;
+    ind.value++;
+    row.id='row'+ind.value;
+    row.style.cursor = "hand";
+    par.getElementById('tblbod_treFiltros_C1').appendChild(row);
+}else {    var row=par.getElementById('');
+    if (row.getElementsByTagName("DIV").length > 0) {
+        var lbl=row.getElementsByTagName("DIV")[0];
+        for(j=0; j<=7; j++)
+            cells[j]=row.getElementsByTagName("TD")[j+1];
+    }
+    else {
+        CreateCells=-1;
+        var cols=row.getElementsByTagName("TD");
+        var jtot=cols.length;
+        row.innerHtml = '';
+        row.innerText = '';    }
+}
+if (CreateCells==-1) {
+    for(j=0; j<=7; j++) {
+        cells[j]=par.createElement("TD");
+        row.appendChild(cells[j]);
+    }
+    for(j=1; j<=7; j++)
+        cells[j].style.display='none';
+    var lbl=par.createElement("DIV");
+    cells[0].appendChild(lbl);
+}
+var textodde;textodde=document.getElementById('igtxtcboDesdetpp').value;
+var textohta='';
+var texto='';
+if (textodde=="") texto=texto+"(vacío)"; else texto=texto+textodde;key='8523,0,0,-1,' + document.getElementById('EsFechaProcesoDesde').value + ',' + document.getElementById('EsFechaProcesoHasta').value + ',C1';
+; var c1="document.getElementById('Layer2_fraFiltro').contentWindow.selectFiltro(event);"; lbl.innerHTML='<DIV align="left" style="padding-left: 62px; font -weight : bold;cursor:hand;width:100%" onclick=" ' + c1 + '">' + texto + '</DIV>';
+row.cells[1].innerText=textodde;
+row.cells[2].innerText=textohta;
+row.cells[3].innerText=key;
+row.cells[4].innerText='-1';
+row.cells[5].innerText='0';
+row.cells[6].innerText='0';
+row.cells[7].innerText='';
+if (Add==-1) {
+     document.getElementById('igtxtcboDesdetpp').value=''; window.parent.EliminarItem('C1');
+}
+};
+</script><script language="javascript">function Delete() {var par=window.parent.document;var obj=par.getElementById('');par.getElementById('tblbod_treFiltros_C1').removeChild(obj);document.getElementById('igtxtcboDesdetpp').value='';window.parent.EliminarItem('C1');
+}; </script><script language="javascript">function DeleteAll() {var par=window.parent.document;
+var obj=par.getElementById('tblbod_treFiltros_C1');
+var tds=obj.getElementsByTagName('TR');
+for (pEle = tds.length - 1; pEle > 0; pEle--) {
+		obj.removeChild(tds[pEle]);
+}
+window.parent.EliminarItem('C1');
+}; </script><script language="javascript"> function selectFiltro(ev, frameID){ document.getElementById('txtFila').value = ev.srcElement.parentElement.parentElement.parentElement.id; document.getElementById('txtvalDesde').value = ev.srcElement.parentElement.parentElement.parentElement.cells(1).innerText; document.getElementById('txtvalHasta').value = ev.srcElement.parentElement.parentElement.parentElement.cells(2).innerText; document.getElementById('txtvalClaves').value = ev.srcElement.parentElement.parentElement.parentElement.cells(3).innerText;  document.getElementById('txtFromFunction').value = ev.srcElement.parentElement.parentElement.parentElement.cells(4).innerText; document.getElementById('EsFechaProcesoDesde').value = ev.srcElement.parentElement.parentElement.parentElement.cells(5).innerText; document.getElementById('EsFechaProcesoHasta').value = ev.srcElement.parentElement.parentElement.parentElement.cells(6).innerText; __doPostBack('Form1', '')}; </script><script language="javascript"> function RefrescarPagina(){__doPostBack('Form1', '')}; </script><script language="javascript"> function SetFechaProceso(esDesde){ if (esDesde==-1) { document.getElementById('fechaDesde').value ='23/04/2021' ; document.getElementById('EsFechaProcesoDesde').value = -1;} else { document.getElementById('fechaHasta').value ='23/04/2021' ; document.getElementById('EsFechaProcesoHasta').value = -1;};}; </script>
+<script type="text/javascript">
+//<![CDATA[
+function ComboSetClass(obj, className) { obj.className =className ;}
+var callBackFrameUrl='/WebResource.axd?d=qedYVb-MUGwZOhHq8csw2B8UI7Sv-tDBSMK7sN9vgmgdlqbEsQIrCLA-KzXIS6LIES2zehB8WE30YMQJjD7jGeyp47o1&t=636316698606689430';
+WebForm_InitCallback();WebForm_AutoFocus('cboDesde');Sys.Application.initialize();
+function cboDesde_TextChanged(oEdit, keyCode, oEvent){ShowRecords('cboDesde','275','150px',event);pFirstOpen = false;}function cboDesde_KeyDown(oEdit, keyCode, oEvent){CloseCombo('cboDesde');}//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+try{igedit_init("cboDesdetpp",0,"cboDesdetpp,12 cboDesde_TextChanged 0 cboDesde_KeyDown ,1,,,,0,1,1,,,2,1,,-1,",[""]);}catch(e){window.status="Can't init editor";}
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+function wb_over(objname) {
+    document.getElementById(objname).style.backgroundColor='NavajoWhite';
+}
+function wb_out(objname) {
+    document.getElementById(objname).style.backgroundColor='';
+}
+function wb_fontover(objname) {
+    var obj=document.getElementById(objname); obj.style.color='Transparent';
+}
+function wb_fontout(objname) {
+    var obj=document.getElementById(objname); obj.style.color='#336699';
+}
+function wb_over_img(objname) {
+    document.getElementById(objname).style.backgroundImage='url(img/webbutton_background_off.bmp)';
+}
+function wb_out_img(objname) {
+    document.getElementById(objname).style.backgroundImage='url(img/webbutton_background.bmp)';
+}
+//]]>
+</script>
+</form>
+        </div>
+
+
+</body>
